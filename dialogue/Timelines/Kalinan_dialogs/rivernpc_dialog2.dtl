@@ -1,0 +1,13 @@
+[signal arg="off_indicator"]
+Juan: Magandang umaga po.
+rivernpc_dialog2: Magandang umaga, iho.
+- Tanungin ang pangalan...
+	Juan: Kayo po ba si Charmaine?
+	rivernpc_dialog2: Oo, ako nga.
+	Juan: Maaari po bang magtanong kung saan nagmula ang mga materyales na ginamit sa pag buo ng Simbahan sa bayan ng Sta Ana ?
+	rivernpc_dialog2: Ang mga materyales  na ginamit sa pag buo ng simbahan ng Sta Ana ay nagmula pa sa "Meycauayan Bulacan , Porac at Betis".
+	rivernpc_dialog2: Ang mga bato ay nag mula sa "Meycauayan, Bulacan".
+	rivernpc_dialog2: Samantala ang mga kahoy naman ay nagmula pa sa mga kagubatan ng "Porac at Betis".
+	rivernpc_dialog2: Tinahak nila ang rutang 'Sta. Ana - Betis' na dumaan sa ilog upang maipadala ito rito.
+	Juan: Maraming salamat po!
+	rivernpc_dialog2: Walang anuman.

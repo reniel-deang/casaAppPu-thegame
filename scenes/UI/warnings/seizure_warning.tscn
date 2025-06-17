@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://d8drcwuvjbxf"]
+
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="1_1kusu"]
+[ext_resource type="Script" path="res://scripts/UI/warning/seizure_warning.gd" id="1_oirnv"]
+
+[node name="seizure_warning" type="Node2D"]
+script = ExtResource("1_oirnv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="seizure_warning" type="Label" parent="CanvasLayer"]
+offset_left = 96.0
+offset_top = 288.0
+offset_right = 1184.0
+offset_bottom = 456.0
+theme_override_fonts/font = ExtResource("1_1kusu")
+theme_override_font_sizes/font_size = 16
+text = "WARNING: READ BEFORE PLAYING
+
+A small percentage of people may experience seizures or other adverse effects 
+when exposed to flashing lights or patterns in video games. If you or anyone in your 
+family has a history of epilepsy or seizures, please consult a doctor before playing.
+
+If you experience dizziness, altered vision, eye or muscle twitches, 
+loss of awareness, disorientation, or 
+ any involuntary movement, stop playing immediately and seek medical attention. "
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

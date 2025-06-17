@@ -1,0 +1,27 @@
+[signal arg="off_indicator"]
+town_npc_talk_1: Maligayang pagdating sa bayan ng Poblacion.
+town_npc_talk_1: O tinatawag na bayan ng Sta.Ana! 
+town_npc_talk_1: Nakikita ko sa iyo na isa kang manlalakbay na hindi pamilyar sa bayan na ito.
+town_npc_talk_1: Maaari ako makatulong sa iyo upang mapagtagumpayan mo ang iyong paglalakbay.
+- Magtanong ng direksyon.
+	Juan: Maaari po ba magtanong kung nasaan po ako ngayon?
+	town_npc_talk_1: Narito ka ngayon sa Bayan ng Sta Ana.
+	town_npc_talk_1: Sa iyong kanan naman ang Pamilihang bayan ng Poblacion.
+	town_npc_talk_1: Pag dumiretso ka ng daan, makikita mo ang simbahan ng Sta Ana.
+	town_npc_talk_1: Sa tabi ng simbahan doon mo makikita ang Holy Cross Academy.
+	town_npc_talk_1: Kung napapaisip ka kung saan patungo ang daan pakanan sa harap ng simbahan, iyon ay papunta sa bario Patayum ('San Bartolome') at iba pang karatig na barangay patungo sa Arayat.
+	town_npc_talk_1: Sa gawing kaliwa naman, ang daan ay patungo sa Tinajeru ('San Juan') at iba pang karatig na bario papunta sa bayan ng Mexico
+	town_npc_talk_1: Kung naguguluhan ka kung nasaan ka, maari mong basahin ang mga nakakalat na karatula, upang maging gabay mo sa iyong paglalakbay.
+	Juan: Maraming salamat po!
+	town_npc_talk_1: Walang anuman.
+- Itanong ang iyong misyon.
+	Juan: Maari po ba magtanong kung sino po ang maari ko mapagtanungan patungkol sa kasaysayan ng bayan ng "Canukil" at ng Simbahan?
+	town_npc_talk_1: Sa palagay ko, ang nais mong gawin ay makausap si Padre Vinancio Samson. Siya ay nasa harapan ng pinto ng simbahan.
+	town_npc_talk_1: Ngunit may mga tanong siya na kailangan mong sagutin upang makuha ang mga sagot na hinahanap mo.
+	town_npc_talk_1: Maaring makatulong sa iyo si Benilda at Bituin sa paghahanap mo ng mga kasagutan.
+	town_npc_talk_1: Makikita mo si Benilda sa dulo ng daan pagawing Mexico.
+	town_npc_talk_1: Habang si Bituin naman ay makikita mo sa dulo ng daan pagawing Arayat.
+	town_npc_talk_1: Maaari ring makatulong sa iyo si Isagani. maikukuwento niya sa iyo ang kasaysayan ng Holy Cross Academy.
+	town_npc_talk_1: Nasa harapan sya mismo ng kumbento sa tabi ng simbahan.
+	Juan: Maraming salamat po.
+	town_npc_talk_1: Walang anuman. Mag iingat ka sa iyong paglalakbay

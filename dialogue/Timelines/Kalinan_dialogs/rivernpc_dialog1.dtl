@@ -1,0 +1,11 @@
+[signal arg="off_indicator"]
+Juan: Magandang umaga po
+rivernpc_dialog1: Magandang umaga, iho!
+- Tanungin ang pangalan...
+	Juan: Kayo po ba si Juanita?
+	rivernpc_dialog1: Oo, ako nga iyon.
+	Juan: Maaari po bang magtanong kung saan mga bayan po konektado ang "RIO DE STA ANA" ?
+	rivernpc_dialog1: Ang ilog o "RIO DE STA ANA" na nakikita mo riyan ay konektado sa mga bayan ng "MEXICO", "SAN FERNANDO" hanggang sa "BACOLOR" at "BETIS"
+	Juan: *Mahaba haba din pala ang ilog na ito*
+	Juan: Maraming salamat po!
+	rivernpc_dialog1: Walang anuman.

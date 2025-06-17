@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6cbh44j0j7sl"]
+
+[ext_resource type="Texture2D" uid="uid://cd4anl3n0is7a" path="res://asset/NPCS/Females/F_12.png" id="1_jqlon"]
+[ext_resource type="Script" path="res://scripts/NPCS/TownNpc/TakingNPCS/town_npc_talk_3.gd" id="1_r0y5k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsfqf"]
+atlas = ExtResource("1_jqlon")
+region = Rect2(0, 0, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xi2o2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsfqf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wgsy"]
+radius = 5.0
+
+[node name="town_npc_talk_3" type="CharacterBody2D" groups=["NPC"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_r0y5k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_xi2o2")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_7wgsy")

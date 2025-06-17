@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://delsirdhcpj26"]
+
+[ext_resource type="Script" path="res://scripts/UI/levelselect/selection_icon.gd" id="1_s4n6q"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="2_lat1d"]
+
+[sub_resource type="Gradient" id="Gradient_dagjj"]
+offsets = PackedFloat32Array(0, 0.00338983, 0.0135593, 0.823729)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r0vnu"]
+gradient = SubResource("Gradient_dagjj")
+width = 64
+
+[node name="selection_icon" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(32, 32)
+script = ExtResource("1_s4n6q")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_right = 168.0
+offset_bottom = 32.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_lat1d")
+theme_override_font_sizes/font_size = 16
+text = "Stage1"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture = SubResource("GradientTexture1D_r0vnu")

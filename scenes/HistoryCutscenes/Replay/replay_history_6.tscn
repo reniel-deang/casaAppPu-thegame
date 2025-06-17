@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://btqu15dkt5ni2"]
+
+[ext_resource type="Script" path="res://scripts/HistoryCutscenes/Replay/replay_history_1.gd" id="1_40mhg"]
+[ext_resource type="VideoStream" path="res://asset/Media/Videos/old_baranggays.ogv" id="2_xwjie"]
+[ext_resource type="PackedScene" uid="uid://jn63ktjg8ab3" path="res://scenes/UI/replay_video.tscn" id="3_1e6qd"]
+
+[node name="replay-history6" type="Node2D" groups=["Cutscene_History"]]
+script = ExtResource("1_40mhg")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+stream = ExtResource("2_xwjie")
+autoplay = true
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="video-controller" type="CanvasLayer" parent="."]
+
+[node name="replay-video" parent="video-controller" instance=ExtResource("3_1e6qd")]
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvmds1joib1qi"]
+
+[ext_resource type="Texture2D" uid="uid://dqdbk5iowpfq5" path="res://asset/Media/Photos/actual_hca.png" id="1_rqqrr"]
+
+[node name="historical-pic-2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 361.375)
+scale = Vector2(0.748768, 0.685484)
+texture = ExtResource("1_rqqrr")

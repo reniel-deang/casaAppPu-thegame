@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://2ab8uv0as7nb"]
+
+[ext_resource type="Texture2D" uid="uid://pa5qvauxmgbm" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/sky (z -3).png" id="1_2aj5h"]
+[ext_resource type="Script" path="res://scripts/UI/menu_base_paralax.gd" id="1_ek4ub"]
+[ext_resource type="Texture2D" uid="uid://cshuvlrvcp24c" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/bg_2 (z -2).png" id="2_ubwn5"]
+[ext_resource type="Texture2D" uid="uid://6xlg5bo0hvql" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/bg_1 (z -1).png" id="3_rv10e"]
+[ext_resource type="Texture2D" uid="uid://c3wpqlmqhst2t" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/middleground (z 0).png" id="4_jioa7"]
+
+[node name="main-menu" type="Node2D"]
+position = Vector2(0, 294)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="base_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_ek4ub")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer"]
+position = Vector2(-467, -566)
+scale = Vector2(1.02068, 1.315)
+texture = ExtResource("1_2aj5h")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer2"]
+position = Vector2(-348, 6)
+texture = ExtResource("2_ubwn5")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer3"]
+position = Vector2(-379, -417)
+scale = Vector2(1.3469, 1)
+texture = ExtResource("3_rv10e")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer4"]
+position = Vector2(-503, -389)
+texture = ExtResource("4_jioa7")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer5"]
+
+[node name="front_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+layer = 2
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer"]
+position = Vector2(179, 380)
+texture = ExtResource("4_jioa7")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer2"]
+position = Vector2(-583, 335)
+texture = ExtResource("4_jioa7")

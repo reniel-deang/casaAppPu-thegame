@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://jn63ktjg8ab3"]
+
+[ext_resource type="Texture2D" uid="uid://cmu4cwl0tiuwj" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight39.png" id="1_bppjv"]
+[ext_resource type="Script" path="res://scripts/HistoryCutscenes/Replay/replay_video.gd" id="1_qb2sp"]
+[ext_resource type="Texture2D" uid="uid://d0em3kqgmge3g" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-light/flatLight39.png" id="2_f6kvd"]
+[ext_resource type="Texture2D" uid="uid://culsug1wj22sl" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight47.png" id="3_33ucu"]
+[ext_resource type="Texture2D" uid="uid://d0v1r4bprnhdp" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-light/flatLight47.png" id="4_k1cw5"]
+
+[node name="replay-video" type="Node2D"]
+script = ExtResource("1_qb2sp")
+
+[node name="back" type="TouchScreenButton" parent="."]
+position = Vector2(32, 32)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("3_33ucu")
+texture_pressed = ExtResource("4_k1cw5")
+
+[node name="restart-video" type="TouchScreenButton" parent="."]
+position = Vector2(1184, 32)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("1_bppjv")
+texture_pressed = ExtResource("2_f6kvd")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="restart-video" to="." method="_on_restartvideo_pressed"]

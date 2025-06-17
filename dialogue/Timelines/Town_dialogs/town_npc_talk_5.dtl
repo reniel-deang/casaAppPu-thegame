@@ -1,0 +1,93 @@
+[signal arg="off_indicator"]
+Juan: Magandang araw po. Kayo po ba si Padre Vinancio Samson?
+town_npc_talk_5: Oo. Ako nga iho, ako si Padre Vinancio Samson.
+town_npc_talk_5: Isang anak ng ating bayan ng Santa Ana.
+town_npc_talk_5: Ako rin ang direktang nag salin ng Latinong Bibliya at ang Roman Misal sa Kapampangan
+town_npc_talk_5: Na inaprubahan ng Simbahan ng Vatican.
+Juan: *WHOAAHHH* Nasa tamang tao ako ngayon.
+Juan: ehem.
+Juan: Maaari po ba matanong ang kasaysayan ng Simbahan ng Sta.Ana at ng mismong poblacion?
+town_npc_talk_5: Oo naman. Ngunit bago ko sabihin sa iyo ay kinakailangan mo munang makapasa sa aking mga katanungan.
+Juan: Sige po.
+town_npc_talk_5: Unang katanungan...
+town_npc_talk_5: Ang unang kabanata ng Libro del Gobernador, na may petsang Disyembre 19, 1598, ay nagsasaad na noong panahon ng pananakop ng mga Espanyol
+town_npc_talk_5: Na ang Bayan ay naging isang visita ng aling bayan sa Pampanga?
+- Porac
+	[wait time="2.0"]
+	Pasensya na ngunit mali ang iyong kasagutan.
+	[end_timeline]
+- Magalang
+	[wait time="2.0"]
+	Pasensya na ngunit mali ang iyong kasagutan.
+	[end_timeline]
+- Betis
+	[wait time="2.0"]
+	Pasensya na ngunit mali ang iyong kasagutan.
+	[end_timeline]
+- Arayat
+	town_npc_talk_5: Magaling! Noon ang Sta Ana ay dating visita ng bayan ng Arayat.
+	town_npc_talk_5: Para sa sunod na katanungan...
+	town_npc_talk_5: Ang Sta Ana ay naging isang malayang bayan panahon ng pananakop ng mga?
+	- Kastila
+		[wait time="2.0"]
+		town_npc_talk_5: Pasenya na ngunit sa pagkakataong ito, mali ang iyong kasagutan.
+		[end_timeline]
+	- Amerikano
+		[wait time="2.0"]
+		town_npc_talk_5: Magaling! Naging isang malayang bayan ito sa panahon ng pananakop ng mga "AMERIKANO
+		town_npc_talk_5: Para sa sunod na katanungan...
+		town_npc_talk_5: Noong 1756, idineklara ang bayan bilang isang parokya. Sino ang  naging unang prayle nito noong 1760?
+		- Prayle Lorenzo Guerra
+			[wait time="2.0"]
+			town_npc_talk_5: Magaling! Noong 1756, idineklara ang bayan bilang isang parokya. Si "Prayle Lorenzo Guerra" ang naging unang prayle nito noong 1760.
+			town_npc_talk_5: Para sa sunod na katanungan....
+			town_npc_talk_5: Alin sa mga sumusunod ang hindi kabilang sa 6 na unang visita ng bayan ng Sta Ana?
+			- San Isidro (Quenabuan)
+				[wait time="2.0"]
+				town_npc_talk_5: Pasensya na ngunit ang napili mo ay kabiliang sa 6 na unang visita ng Sta Ana
+				[end_timeline]
+			- Santiago (Libutad)
+				[wait time="2.0"]
+				town_npc_talk_5: Pasensya na ngunit ang napili mo ay kabiliang sa 6 na unang visita ng Sta Ana
+				[end_timeline]
+			- San Nicolas (Sepung Ilug)
+				[wait time="2.0"]
+				town_npc_talk_5: Pasensya na ngunit ang napili mo ay kabiliang sa 6 na unang visita ng Sta Ana
+				[end_timeline]
+			- San Agustin (Sumpung)
+				[wait time="2.0"]
+				town_npc_talk_5: Pasensya na ngunit ang napili mo ay kabiliang sa 6 na unang visita ng Sta Ana
+				[end_timeline]
+			- San Juan (Tinajeru)
+				town_npc_talk_5: Magaling! Nasagot mo lahat ng aking katanungan
+				town_npc_talk_5: Dahil dyan, ikkwento ko ang iilan sa kasaysayan ng bayan at ng simbahan
+				Juan: Maraming salamat po!
+				[signal arg="town_complete"]
+			- Sta. Lucia (Calinan)
+				[wait time="2.0"]
+				town_npc_talk_5: Pasensya na ngunit ang napili mo ay kabiliang sa 6 na unang visita ng Sta Ana
+				[end_timeline]
+			- Sta. Maria (Balen Bayu)
+				[wait time="2.0"]
+				town_npc_talk_5: Pasensya na ngunit ang napili mo ay kabiliang sa 6 na unang visita ng Sta Ana
+				[end_timeline]
+		- Prayle Vinancio Samson
+			[wait time="2.0"]
+			town_npc_talk_5: Pasenya na ngunit sa pagkakataong ito, mali ang iyong kasagutan.
+			[end_timeline]
+		- Payle Vicente Ferrer
+			[wait time="2.0"]
+			town_npc_talk_5: Pasenya na ngunit sa pagkakataong ito, mali ang iyong kasagutan.
+			[end_timeline]
+	- Hapon
+		[wait time="2.0"]
+		town_npc_talk_5: Pasenya na ngunit sa pagkakataong ito, mali ang iyong kasagutan.
+		[end_timeline]
+- Mexico
+	[wait time="2.0"]
+	Pasensya na ngunit mali ang iyong kasagutan.
+	[end_timeline]
+- Candaba
+	[wait time="2.0"]
+	Pasensya na ngunit mali ang iyong kasagutan.
+	[end_timeline]

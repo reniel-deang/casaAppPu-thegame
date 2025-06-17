@@ -1,0 +1,318 @@
+[gd_scene load_steps=31 format=3 uid="uid://b14h83kg7q5lt"]
+
+[ext_resource type="Script" path="res://scripts/Worlds/town_place.gd" id="1_47pjd"]
+[ext_resource type="PackedScene" uid="uid://cm6uaiwihqlcx" path="res://scenes/World/Levels/world_one_2.tscn" id="1_p8msa"]
+[ext_resource type="PackedScene" uid="uid://lnabm23k83tt" path="res://scenes/Main/main_character.tscn" id="2_7suo4"]
+[ext_resource type="Script" path="res://scripts/NPCS/npc_walktown1.gd" id="3_v1vdk"]
+[ext_resource type="AudioStream" uid="uid://dqr58hcef61gq" path="res://asset/music/TownTheme.mp3" id="3_w3u82"]
+[ext_resource type="PackedScene" uid="uid://caavdji20nivq" path="res://scenes/Character/NPCS/Female/walking_female_1.tscn" id="4_onmx0"]
+[ext_resource type="PackedScene" uid="uid://c54votyram3xo" path="res://scenes/Character/NPCS/Female/walking_female_3.tscn" id="5_x18rb"]
+[ext_resource type="PackedScene" uid="uid://b2ek0klkvuypd" path="res://scenes/Character/NPCS/TownNpcs/town_npc_3.tscn" id="6_6elga"]
+[ext_resource type="PackedScene" uid="uid://cesp4igi6xsr2" path="res://scenes/Character/NPCS/town_npc_1.tscn" id="6_ngixy"]
+[ext_resource type="PackedScene" uid="uid://dcyckj6nif2i6" path="res://scenes/Signs/holy_cross_sign.tscn" id="7_jiq87"]
+[ext_resource type="PackedScene" uid="uid://drs6b5jpsl83c" path="res://scenes/Character/NPCS/TownNpcs/town_npc_4.tscn" id="7_sytas"]
+[ext_resource type="PackedScene" uid="uid://cqas3f3vaheuy" path="res://scenes/UI/in_game_ui.tscn" id="8_bkor0"]
+[ext_resource type="PackedScene" uid="uid://duauy7bm4ef2e" path="res://scenes/Character/NPCS/TownNpcs/Talking_npcs/town_npc_talk_1.tscn" id="9_04twf"]
+[ext_resource type="PackedScene" uid="uid://chhsq7xo262ol" path="res://scenes/Character/NPCS/TownNpcs/town_npc_2.tscn" id="9_it1hs"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="9_uyesn"]
+[ext_resource type="PackedScene" uid="uid://c174p1w40y62b" path="res://scenes/Character/NPCS/TownNpcs/Talking_npcs/town_npc_talk_2.tscn" id="10_yn5of"]
+[ext_resource type="PackedScene" uid="uid://c6cbh44j0j7sl" path="res://scenes/Character/NPCS/TownNpcs/Talking_npcs/town_npc_talk_3.tscn" id="11_ef8a4"]
+[ext_resource type="PackedScene" uid="uid://b83sqo8tidyol" path="res://scenes/Character/NPCS/TownNpcs/Talking_npcs/town_npc_talk_4.tscn" id="12_0rj6g"]
+[ext_resource type="PackedScene" uid="uid://bq6numpcpjpx4" path="res://scenes/Character/NPCS/TownNpcs/Talking_npcs/town_npc_talk_5.tscn" id="13_y0441"]
+[ext_resource type="PackedScene" uid="uid://idf3cepxu6du" path="res://scenes/Signs/parish_sign.tscn" id="17_0iut8"]
+[ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://asset/GUI/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="17_nm1am"]
+[ext_resource type="PackedScene" uid="uid://bus6qmthdj8c2" path="res://scenes/UI/revisions/show_place.tscn" id="22_86td6"]
+[ext_resource type="PackedScene" uid="uid://48vqv5r4pggx" path="res://scenes/ShowPics/historical_pic_1.tscn" id="23_j4oke"]
+[ext_resource type="PackedScene" uid="uid://co5i171c22wfw" path="res://scenes/UI/revisions/quest_indicator.tscn" id="23_qbu6y"]
+[ext_resource type="PackedScene" uid="uid://cvmds1joib1qi" path="res://scenes/ShowPics/historical_pic_2.tscn" id="24_3soe5"]
+
+[sub_resource type="Curve2D" id="Curve2D_7bpeb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -752, -32, 0, 0, 0, 0, -720, -32, 0, 0, 0, 0, -688, -32, 0, 0, 0, 0, -640, -32, 0, 0, 0, 0, -576, -32, 0, 0, 0, 0, -496, -32, 0, 0, 0, 0, -416, -32, 0, 0, 0, 0, -376, -32, 0, 0, 0, 0, -192, -32, 0, 0, 0, 0, -24, -32, 0, 0, 0, 0, 32, -32, 0, 0, 0, 0, 104, -32, 0, 0, 0, 0, 224, -32, 0, 0, 0, 0, 336, -32, 0, 0, 0, 0, 416, -32, 0, 0, 0, 0, 416, 48, 0, 0, 0, 0, 416, 112, 0, 0, 0, 0, 416, 152, 0, 0, 0, 0, 416, 176, 0, 0, 0, 0, 304, 176, 0, 0, 0, 0, 304, 240, 0, 0, 0, 0, 304, 264, 0, 0, 0, 0, 304, 288, 0, 0, 0, 0, 304, 344, 0, 0, 0, 0, 368, 344, 0, 0, 0, 0, 368, 392, 0, 0, 0, 0, 480, 392, 0, 0, 0, 0, 600, 392, 0, 0, 0, 0, 600, 280, 0, 0, 0, 0, 600, 224, 0, 0, 0, 0, 576, 224, 0, 0, 0, 0, 576, 168, 0, 0, 0, 0, 576, 136, 0, 0, 0, 0, 576, 88, 0, 0, 0, 0, 472, 88, 0, 0, 0, 0, 456, 88, 0, 0, 0, 0, 456, 64, 0, 0, 0, 0, 456, 16, 0, 0, 0, 0, 456, -16, 0, 0, 0, 0, 504, -16, 0, 0, 0, 0, 568, -16, 0, 0, 0, 0, 648, -16, 0, 0, 0, 0, 760, -16, 0, 0, 0, 0, 832, -16, 0, 0, 0, 0, 912, -16, 0, 0, 0, 0, 912, -48, 0, 0, 0, 0, 64, -48, 0, 0, 0, 0, -432, -48, 0, 0, 0, 0, -752, -48, 0, 0, 0, 0, -752, -32)
+}
+point_count = 50
+
+[sub_resource type="Animation" id="Animation_nwirr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texts/place_name:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6pamu"]
+resource_name = "hide_kalinan"
+length = 2.0
+
+[sub_resource type="Animation" id="Animation_1g3ps"]
+resource_name = "show_kalinan"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texts/place_name:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7powh"]
+_data = {
+"RESET": SubResource("Animation_nwirr"),
+"hide_kalinan": SubResource("Animation_6pamu"),
+"show_kalinan": SubResource("Animation_1g3ps")
+}
+
+[node name="town_place" type="Node2D" groups=["Quest"]]
+y_sort_enabled = true
+script = ExtResource("1_47pjd")
+
+[node name="World" parent="." instance=ExtResource("1_p8msa")]
+position = Vector2(-19, 577)
+
+[node name="MainCharacter" parent="World" instance=ExtResource("2_7suo4")]
+position = Vector2(192, -180)
+scale = Vector2(1.03945, 0.782214)
+
+[node name="Camera2D" type="Camera2D" parent="World/MainCharacter"]
+zoom = Vector2(2.5, 2.5)
+limit_left = -654
+limit_top = -630
+limit_right = 1061
+limit_bottom = 414
+position_smoothing_enabled = true
+
+[node name="NPCS" type="Node2D" parent="World"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(172, -576)
+
+[node name="town_npc_1" parent="World/NPCS" instance=ExtResource("6_ngixy")]
+y_sort_enabled = true
+position = Vector2(454, 139)
+collision_layer = 3
+
+[node name="town_npc_2" parent="World/NPCS" instance=ExtResource("9_it1hs")]
+y_sort_enabled = true
+position = Vector2(-8, -40)
+collision_layer = 3
+
+[node name="town_npc_3" parent="World/NPCS" instance=ExtResource("6_6elga")]
+position = Vector2(-264, 242)
+
+[node name="town_npc_4" parent="World/NPCS" instance=ExtResource("7_sytas")]
+position = Vector2(-357, -42)
+
+[node name="town_npc_5" parent="World/NPCS" instance=ExtResource("6_ngixy")]
+y_sort_enabled = true
+position = Vector2(-683, -5)
+collision_layer = 3
+
+[node name="town_npc_6" parent="World/NPCS" instance=ExtResource("6_6elga")]
+position = Vector2(358, 376)
+
+[node name="walking_npc_2" parent="World/NPCS" instance=ExtResource("6_ngixy")]
+y_sort_enabled = true
+position = Vector2(-415, -379)
+
+[node name="walking_female_3" parent="World/NPCS" instance=ExtResource("5_x18rb")]
+position = Vector2(-147, 68)
+
+[node name="town_npc_talk1" parent="World/NPCS" instance=ExtResource("9_04twf")]
+y_sort_enabled = true
+position = Vector2(41, 165)
+
+[node name="town_npc_talk2" parent="World/NPCS" instance=ExtResource("10_yn5of")]
+y_sort_enabled = true
+position = Vector2(851, -64)
+
+[node name="town_npc_talk_3" parent="World/NPCS" instance=ExtResource("11_ef8a4")]
+y_sort_enabled = true
+position = Vector2(-700, -75)
+
+[node name="town_npc_talk_4" parent="World/NPCS" instance=ExtResource("12_0rj6g")]
+y_sort_enabled = true
+position = Vector2(548, -391)
+
+[node name="town_npc_talk_5" parent="World/NPCS" instance=ExtResource("13_y0441")]
+y_sort_enabled = true
+position = Vector2(98, -391)
+
+[node name="NPC1" type="Path2D" parent="World/NPCS"]
+curve = SubResource("Curve2D_7bpeb")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="World/NPCS/NPC1"]
+position = Vector2(-752, -32)
+rotates = false
+script = ExtResource("3_v1vdk")
+
+[node name="walking_female_1" parent="World/NPCS/NPC1/PathFollow2D" instance=ExtResource("4_onmx0")]
+position = Vector2(0, 16)
+
+[node name="Signs" type="Node2D" parent="World"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(172, -576)
+
+[node name="holy-cross-sign" parent="World/Signs" instance=ExtResource("7_jiq87")]
+y_sort_enabled = true
+position = Vector2(409, -404)
+
+[node name="parish-sign" parent="World/Signs" instance=ExtResource("17_0iut8")]
+position = Vector2(69, -118)
+
+[node name="Indicators" type="Node" parent="."]
+
+[node name="sign1" type="Sprite2D" parent="Indicators"]
+z_index = 2
+position = Vector2(581, -406)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(626, 196, 12, 9)
+
+[node name="sign2" type="Sprite2D" parent="Indicators"]
+z_index = 2
+position = Vector2(243, -121)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(626, 196, 12, 9)
+
+[node name="town_npc_1" type="Sprite2D" parent="Indicators"]
+z_index = 1
+position = Vector2(194, 129)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(675, 193, 10, 14)
+
+[node name="town_npc_2" type="Sprite2D" parent="Indicators"]
+z_index = 1
+position = Vector2(1004, -101)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(675, 193, 10, 14)
+
+[node name="town_npc_3" type="Sprite2D" parent="Indicators"]
+z_index = 1
+position = Vector2(-547, -114)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(675, 193, 10, 14)
+
+[node name="town_npc_4" type="Sprite2D" parent="Indicators"]
+z_index = 1
+position = Vector2(701, -427)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(675, 193, 10, 14)
+
+[node name="town_npc_5" type="Sprite2D" parent="Indicators"]
+z_index = 1
+position = Vector2(251, -433)
+texture = ExtResource("17_nm1am")
+region_enabled = true
+region_rect = Rect2(613, 208, 6, 15)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_w3u82")
+autoplay = true
+
+[node name="android_controls" type="CanvasLayer" parent="."]
+layer = 127
+
+[node name="InGameUI" parent="android_controls" instance=ExtResource("8_bkor0")]
+
+[node name="Animated_Text" type="Node2D" parent="android_controls"]
+position = Vector2(0, -2)
+
+[node name="Texts" type="Node" parent="android_controls/Animated_Text"]
+
+[node name="place_name" type="Label" parent="android_controls/Animated_Text/Texts"]
+z_index = 10
+offset_left = -229.0
+offset_top = 685.0
+offset_right = 783.0
+offset_bottom = 717.0
+scale = Vector2(1, 1.00814)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("9_uyesn")
+theme_override_font_sizes/font_size = 16
+text = " STAGE 5 : Ang bayan ng Santa Ana Pampanga"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="android_controls/Animated_Text/Texts"]
+
+[node name="show_place" parent="android_controls/Animated_Text/Texts" instance=ExtResource("22_86td6")]
+position = Vector2(0, 264)
+
+[node name="show_place" parent="android_controls/Animated_Text/Texts/show_place" index="1"]
+text = "BAYAN NG STA ANA"
+
+[node name="quest-indicator" parent="android_controls/Animated_Text/Texts" instance=ExtResource("23_qbu6y")]
+
+[node name="Sprite2D" parent="android_controls/Animated_Text/Texts/quest-indicator" index="0"]
+position = Vector2(367.333, 36.5)
+scale = Vector2(15.3333, 1.19565)
+
+[node name="place_name2" parent="android_controls/Animated_Text/Texts/quest-indicator" index="1"]
+offset_left = -232.0
+offset_top = 16.0
+offset_right = 780.0
+offset_bottom = 48.0
+text = "! Hanapin si Amihan at alamin ang misyon"
+
+[node name="place_name3" type="Label" parent="android_controls/Animated_Text/Texts/quest-indicator"]
+z_index = 10
+offset_left = -144.0
+offset_top = 40.0
+offset_right = 868.0
+offset_bottom = 72.0
+scale = Vector2(1, 1.00814)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("9_uyesn")
+theme_override_font_sizes/font_size = 16
+text = "! Mag libot sa bayan ng Santa Ana at tapusin ang antas"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="android_controls/Animated_Text"]
+libraries = {
+"": SubResource("AnimationLibrary_7powh")
+}
+
+[node name="photo_timer" type="Timer" parent="android_controls"]
+wait_time = 5.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Photos" type="Node2D" parent="CanvasLayer"]
+
+[node name="historical-pic-1" parent="CanvasLayer/Photos" instance=ExtResource("23_j4oke")]
+visible = false
+
+[node name="historical-pic-2" parent="CanvasLayer/Photos" instance=ExtResource("24_3soe5")]
+visible = false
+
+[connection signal="timeout" from="android_controls/Animated_Text/Texts/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="android_controls/photo_timer" to="." method="_on_photo_timer_timeout"]
+
+[editable path="World/NPCS/NPC1/PathFollow2D/walking_female_1"]
+[editable path="android_controls/Animated_Text/Texts/show_place"]
+[editable path="android_controls/Animated_Text/Texts/quest-indicator"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq6numpcpjpx4"]
+
+[ext_resource type="Script" path="res://scripts/NPCS/TownNpc/TakingNPCS/town_npc_talk_5.gd" id="1_68xaj"]
+[ext_resource type="Texture2D" uid="uid://k4bgls1urqxt" path="res://asset/NPCS/Males/M_12.png" id="1_ryh5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmexl"]
+atlas = ExtResource("1_ryh5d")
+region = Rect2(0, 0, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c1pa5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmexl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wgsy"]
+radius = 5.0
+
+[node name="town_npc_talk_5" type="CharacterBody2D" groups=["NPC"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_68xaj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_c1pa5")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_7wgsy")

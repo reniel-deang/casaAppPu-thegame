@@ -1,0 +1,53 @@
+[gd_scene load_steps=12 format=3 uid="uid://bo222ohoija5c"]
+
+[ext_resource type="Script" path="res://scripts/UI/platform_controls.gd" id="1_hyjbg"]
+[ext_resource type="Texture2D" uid="uid://d3mfx00l1uffn" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark19.png" id="1_ws0io"]
+[ext_resource type="Texture2D" uid="uid://dbofakrud2n6r" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight22.png" id="2_h5jmj"]
+[ext_resource type="Texture2D" uid="uid://bwosta3eunyt0" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark20.png" id="3_wcodw"]
+[ext_resource type="Texture2D" uid="uid://iqu3gdclx8hy" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight23.png" id="4_5tpb7"]
+[ext_resource type="Texture2D" uid="uid://vlgs3rm7yq81" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark21.png" id="5_pcy82"]
+[ext_resource type="Texture2D" uid="uid://bdtblkkb1nmpk" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight24.png" id="6_761g2"]
+[ext_resource type="Texture2D" uid="uid://wcat132w7oi2" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark44.png" id="8_si7t8"]
+[ext_resource type="Texture2D" uid="uid://d1x4xc8lm78cv" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight47.png" id="9_un1p7"]
+[ext_resource type="Texture2D" uid="uid://c8qilg8tecnbu" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark09.png" id="10_hl084"]
+[ext_resource type="Texture2D" uid="uid://b7iu0foldp3wg" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight12.png" id="11_abxt0"]
+
+[node name="platform-controls" type="Node2D"]
+script = ExtResource("1_hyjbg")
+
+[node name="left" type="TouchScreenButton" parent="."]
+position = Vector2(32, 480)
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("1_ws0io")
+texture_pressed = ExtResource("2_h5jmj")
+action = "move_left"
+
+[node name="right" type="TouchScreenButton" parent="."]
+position = Vector2(224, 480)
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("3_wcodw")
+texture_pressed = ExtResource("4_5tpb7")
+action = "move_right"
+
+[node name="top" type="TouchScreenButton" parent="."]
+position = Vector2(1120, 480)
+scale = Vector2(1.3, 1.3)
+texture_normal = ExtResource("5_pcy82")
+texture_pressed = ExtResource("6_761g2")
+action = "jump"
+
+[node name="restart" type="TouchScreenButton" parent="."]
+position = Vector2(1184, 32)
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("8_si7t8")
+texture_pressed = ExtResource("9_un1p7")
+action = "ui_up"
+
+[node name="pause" type="TouchScreenButton" parent="."]
+position = Vector2(1088, 32)
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("10_hl084")
+texture_pressed = ExtResource("11_abxt0")
+action = "ui_up"
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]

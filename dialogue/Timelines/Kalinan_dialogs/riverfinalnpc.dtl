@@ -1,0 +1,59 @@
+[signal arg="off_indicator"]
+riverfinalnpc: Teka. Sino ka at anong pakay mo?
+Juan: Ako po si juan. Isang manglalakbay
+Juan: Matanong ko lamang po kung dito po ba ang daan patungo sa bayan ng "STA.ANA"?
+riverfinalnpc: Oo. Dito ang daan. Mukhang pakay mo ang makapunta sa bayan. Ngunit di ka maaaring maka pasok dito ng basta-basta.
+riverfinalnpc: Bago kita hayaan makapasok ay may iilan akong katanungan sa iyo. Kinakailangan mo na masagot ang lahat ng mga ito upang makatuloy ka sa daang ito
+Juan: Sige po!
+riverfinalnpc: Unang Katanungan.....
+riverfinalnpc: Mag bigay ng isang karatig bayan na konektado sa "RIO DE STA ANA" o ilog ng Sta. Ana?
+label question
+- Magalang
+	[wait time="2.0"]
+	riverfinalnpc: Pasensya na ngunit mali ang iyong sagot..
+	jump question
+- Sta Ana
+	[wait time="2.0"]
+	riverfinalnpc: Bukod sa Sta Ana . Ano pa ang Mga bayan na konektado rito?
+	jump question
+- Mexico
+	[wait time="2.0"]
+	label question1
+	riverfinalnpc: Magaling, bukod sa iyong nabanggit, ano pa ang mga karatig bayan na konektado rito?
+	- Angeles
+		[wait time="2.0"]
+		riverfinalnpc: Pasensya na ngunit mali ang iyong kasagutan..
+		[end_timeline]
+	- San Fernando
+		[wait time="2.0"]
+		riverfinalnpc: Magaling! , Bukod sa dalawang bayan na iyong nasaad, alin pa ang natitirang dalawa?
+		- Bacolor at Betis
+			[wait time="2.0"]
+			riverfinalnpc: Magaling iho. Para sa sunod na na katanungan...
+			riverfinalnpc: Saan nagmula ang mga bato at kahoy na ginamit sa pag buo ng simbahan sa bayan ng Sta Ana na tinahak ang ruta ng ilog mula Betis-Sta Ana?
+			- Bulacan, Porac at Betis
+				[wait time="2.0"]
+				riverfinalnpc: Magaling! Dahil diyan, maaari ka na dumaan..
+				Juan: Salamat po..
+				riverfinalnpc: Mag iingat ka sa iyong paglalakbay
+				[signal arg="quest_one_ok"]
+			- Bulacan, Porac at Bacolor
+				[wait time="2.0"]
+				riverfinalnpc: Pasensya na ngunit mali ang iyong sagot...
+				[end_timeline]
+			- Bulacan, Bacolor at Manila
+				[wait time="2.0"]
+				riverfinalnpc: Pasensya na ngunit mali ang iyong sagot...
+				[end_timeline]
+		- Magalang at Macabebe
+			[wait time="2.0"]
+			riverfinalnpc: Pasensya na ngunit mali ang iyong sagot...
+			[end_timeline]
+		- Nueva Ecija at Tarlac
+			[wait time="2.0"]
+			riverfinalnpc: Pasensya na ngunit mali ang iyong sagot...
+			[end_timeline]
+	- Candaba.
+		[wait time="2.0"]
+		riverfinalnpc: Pasensya na ngunit di kita maaaring paraanin.
+		[end_timeline]

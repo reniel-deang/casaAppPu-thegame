@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://djj7cdwj6wic7"]
+
+[ext_resource type="Script" path="res://scripts/UI/warning/intro_note.gd" id="1_jxdsu"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="2_nhaly"]
+
+[node name="intro_note" type="Node2D"]
+script = ExtResource("1_jxdsu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="seizure_warning" type="Label" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 1248.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("2_nhaly")
+theme_override_font_sizes/font_size = 16
+text = "Ako si Juan
+Isang simple, at tipikal na mamamayan ng bayan ng Sta Ana Pampanga
+
+Mahal ko ang kultura at kasaysayan ng aking bayan
+Hilig ko rin magbasa ng mga kasayayan"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

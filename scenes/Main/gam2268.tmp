@@ -1,0 +1,202 @@
+[gd_scene load_steps=24 format=3 uid="uid://d0633oq664oxe"]
+
+[ext_resource type="Script" path="res://scripts/Worlds/riverplace_script.gd" id="1_bpb40"]
+[ext_resource type="PackedScene" uid="uid://lnabm23k83tt" path="res://scenes/Main/main_character.tscn" id="1_enkd3"]
+[ext_resource type="PackedScene" uid="uid://cjejvd18m76h2" path="res://scenes/World/Levels/world_one_1.tscn" id="1_nfurv"]
+[ext_resource type="AudioStream" uid="uid://bitbpxvol525j" path="res://asset/music/time_for_adventure.mp3" id="3_rewao"]
+[ext_resource type="Script" path="res://scripts/NPCS/npc_walkriver.gd" id="4_4shln"]
+[ext_resource type="PackedScene" uid="uid://dd3klcrqxn8rs" path="res://scenes/Character/NPCS/male_npc_1.tscn" id="5_on34m"]
+[ext_resource type="PackedScene" uid="uid://cyd5yu5x342ir" path="res://scenes/Character/NPCS/walking_npc_2.tscn" id="5_rjwdb"]
+[ext_resource type="PackedScene" uid="uid://b330hta4p8h83" path="res://scenes/Character/NPCS/walking_npc_3.tscn" id="6_h2n5m"]
+[ext_resource type="PackedScene" uid="uid://caavdji20nivq" path="res://scenes/Character/NPCS/Female/walking_female_1.tscn" id="7_h1nnm"]
+[ext_resource type="Script" path="res://scripts/NPCS/rivernpc_dialog1.gd" id="8_biaf4"]
+[ext_resource type="PackedScene" uid="uid://dtcv7yycamxit" path="res://scenes/Character/NPCS/Female/walking_female_2.tscn" id="8_uvv0j"]
+[ext_resource type="Texture2D" uid="uid://bymvtyvgtkrgx" path="res://asset/GUI/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="10_5ahs8"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="10_wd32a"]
+[ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://asset/GUI/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="11_7l1wm"]
+[ext_resource type="PackedScene" uid="uid://whmif5hiuvkj" path="res://scenes/World/Signs/sign.tscn" id="13_tjt54"]
+[ext_resource type="PackedScene" uid="uid://bg05syjqhblpl" path="res://scenes/UI/android_controls.tscn" id="17_dxlcc"]
+
+[sub_resource type="Curve2D" id="Curve2D_66ojl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -440, -16, 0, 0, 0, 0, -400, -16, 0, 0, 0, 0, -8, -16, 0, 0, 0, 0, 56, -16, 0, 0, 0, 0, 56, 32, 0, 0, 0, 0, 56, 112, 0, 0, 0, 0, 56, 168, 0, 0, 0, 0, 56, 192, 0, 0, 0, 0, 56, 200, 0, 0, 0, 0, 176, 200, 0, 0, 0, 0, 624, 200, 0, 0, 0, 0, 624, 232, 0, 0, 0, 0, 528, 232, 0, 0, 0, 0, 328, 232, 0, 0, 0, 0, 304, 232, 0, 0, 0, 0, 304, 328, 0, 0, 0, 0, 256, 328, 0, 0, 0, 0, 256, 280, 0, 0, 0, 0, 280, 280, 0, 0, 0, 0, 280, 224, 0, 0, 0, 0, 48, 224, 0, 0, 0, 0, 24, 224, 0, 0, 0, 0, 24, 144, 0, 0, 0, 0, 40, 144, 0, 0, 0, 0, 40, 16, 0, 0, 0, 0, -96, 16, 0, 0, 0, 0, -200, 16, 0, 0, 0, 0, -304, 16, 0, 0, 0, 0, -400, 16, 0, 0, 0, 0, -440, 16, 0, 0, 0, 0, -440, -16)
+}
+point_count = 31
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w381"]
+size = Vector2(64, 33.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfgob"]
+size = Vector2(177, 12.5)
+
+[sub_resource type="Animation" id="Animation_nwirr"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_6pamu"]
+resource_name = "hide_kalinan"
+length = 2.0
+
+[sub_resource type="Animation" id="Animation_1g3ps"]
+resource_name = "show_kalinan"
+length = 1.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7powh"]
+_data = {
+"RESET": SubResource("Animation_nwirr"),
+"hide_kalinan": SubResource("Animation_6pamu"),
+"show_kalinan": SubResource("Animation_1g3ps")
+}
+
+[node name="River_Place" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_bpb40")
+
+[node name="World_one" parent="." instance=ExtResource("1_nfurv")]
+position = Vector2(0, -2)
+
+[node name="NPCS" type="Node2D" parent="World_one"]
+y_sort_enabled = true
+position = Vector2(0, 2)
+
+[node name="NPC1" type="Path2D" parent="World_one/NPCS"]
+y_sort_enabled = true
+curve = SubResource("Curve2D_66ojl")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="World_one/NPCS/NPC1"]
+position = Vector2(-440, -16)
+rotates = false
+script = ExtResource("4_4shln")
+
+[node name="walking_npc_2" parent="World_one/NPCS/NPC1/PathFollow2D" instance=ExtResource("5_rjwdb")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 8)
+
+[node name="walking_npc_3" parent="World_one/NPCS" instance=ExtResource("6_h2n5m")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(192, -213)
+
+[node name="MaleNPC1" parent="World_one/NPCS" instance=ExtResource("5_on34m")]
+position = Vector2(-48, 255)
+
+[node name="walking_female_1" parent="World_one/NPCS" groups=["NPC"] instance=ExtResource("7_h1nnm")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-421, -42)
+script = ExtResource("8_biaf4")
+
+[node name="walking_female_2" parent="World_one/NPCS" instance=ExtResource("8_uvv0j")]
+position = Vector2(424, 151)
+
+[node name="Indicator" type="Node" parent="World_one/NPCS"]
+
+[node name="rivernpc1" type="Sprite2D" parent="World_one/NPCS/Indicator"]
+modulate = Color(0.980562, 0.958376, 0.984356, 1)
+position = Vector2(-48, 218)
+texture = ExtResource("10_5ahs8")
+region_enabled = true
+region_rect = Rect2(675, 257, 10, 14)
+
+[node name="riverfinalnpc" type="Sprite2D" parent="World_one/NPCS/Indicator"]
+modulate = Color(0.980562, 0.958376, 0.984356, 1)
+position = Vector2(192, -253)
+texture = ExtResource("10_5ahs8")
+region_enabled = true
+region_rect = Rect2(614, 272, 4, 15)
+
+[node name="rivernpc_dialog1" type="Sprite2D" parent="World_one/NPCS/Indicator"]
+modulate = Color(0.896383, 0.0329571, 0.759643, 1)
+position = Vector2(-420, -78)
+texture = ExtResource("10_5ahs8")
+region_enabled = true
+region_rect = Rect2(675, 257, 10, 14)
+
+[node name="rivernpc_dialog2" type="Sprite2D" parent="World_one/NPCS/Indicator"]
+modulate = Color(0.307437, 0.618483, 0.287064, 1)
+position = Vector2(425, 110)
+texture = ExtResource("10_5ahs8")
+region_enabled = true
+region_rect = Rect2(675, 257, 10, 14)
+
+[node name="sign" type="Sprite2D" parent="World_one/NPCS/Indicator"]
+z_index = 2
+position = Vector2(30, 127)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_7l1wm")
+region_enabled = true
+region_rect = Rect2(626, 196, 12, 9)
+
+[node name="MainCharacter" parent="World_one" instance=ExtResource("1_enkd3")]
+unique_name_in_owner = true
+position = Vector2(-40.9999, 437)
+scale = Vector2(1.03945, 0.782214)
+
+[node name="Camera2D" type="Camera2D" parent="World_one/MainCharacter"]
+zoom = Vector2(2.5, 2.5)
+limit_left = -475
+limit_top = -317
+limit_right = 630
+limit_bottom = 444
+position_smoothing_enabled = true
+
+[node name="Doors" type="Node" parent="World_one"]
+
+[node name="to_town" type="Area2D" parent="World_one/Doors"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_one/Doors/to_town"]
+position = Vector2(192, -311.063)
+shape = SubResource("RectangleShape2D_4w381")
+
+[node name="Animated_Text" type="Node2D" parent="World_one"]
+
+[node name="Texts" type="Node" parent="World_one/Animated_Text"]
+
+[node name="place_name" type="Label" parent="World_one/Animated_Text/Texts"]
+z_index = 10
+offset_left = -345.0
+offset_top = 416.0
+offset_right = 37.0
+offset_bottom = 439.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("10_wd32a")
+theme_override_font_sizes/font_size = 8
+text = " STAGE 1 : KALINAN (ROAD TO TOWN PROPER)"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="place_name_off" type="Area2D" parent="World_one/Animated_Text"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World_one/Animated_Text/place_name_off"]
+position = Vector2(-31, 371)
+shape = SubResource("RectangleShape2D_vfgob")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="World_one/Animated_Text"]
+libraries = {
+"": SubResource("AnimationLibrary_7powh")
+}
+
+[node name="Sign" parent="World_one" instance=ExtResource("13_tjt54")]
+position = Vector2(10, 127)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.918716, 0.741565, 0.747931, 1)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_rewao")
+autoplay = true
+
+[node name="android_controls" type="CanvasLayer" parent="."]
+layer = 127
+
+[node name="Android_controls" parent="android_controls" instance=ExtResource("17_dxlcc")]
+
+[connection signal="body_exited" from="World_one/Animated_Text/place_name_off" to="." method="_on_place_name_off_body_exited"]
+
+[editable path="World_one/NPCS/NPC1/PathFollow2D/walking_npc_2"]

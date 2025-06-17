@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://hxeipvos3f58"]
+
+[ext_resource type="Script" path="res://scripts/UI/warning/historical_note.gd" id="1_mdo61"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="2_6407m"]
+
+[node name="historical_note" type="Node2D"]
+script = ExtResource("1_mdo61")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="seizure_warning" type="Label" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = 320.0
+offset_right = 1248.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("2_6407m")
+theme_override_font_sizes/font_size = 16
+text = "Inspired by historical events and real-life figures, this work of fiction was designed,
+ developed, and created in collaboration with 'CASA-APU.'
+
+The gameplay features fictional characters and reimagined versions of past locations in 
+Santa Ana. However, the historical trivia and certain events depicted in the game are based on 
+real-life occurrences."
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

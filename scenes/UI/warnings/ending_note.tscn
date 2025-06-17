@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3u15luxo13nl"]
+
+[ext_resource type="Script" path="res://scripts/UI/warning/ending_note.gd" id="1_p5tuo"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="1_v8dan"]
+
+[node name="ending_note" type="Node2D"]
+script = ExtResource("1_p5tuo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="seizure_warning" type="Label" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = 288.0
+offset_right = 1248.0
+offset_bottom = 494.0
+theme_override_fonts/font = ExtResource("1_v8dan")
+theme_override_font_sizes/font_size = 16
+text = "Matapos kong nakuha lahat ng 14 na barya at makatawid sa kagubatan
+Napansin ko na tila ba pamilyar ang aking nakikita
+\"Ako'y nakabalik na sa kasalukuyan!\"
+Aniya ko sa aking sarili
+
+Sa aking paglalakbay, Marami akong natutunan patungkol sa kasaysayan
+ na di kailanman ay naituturo sa ano mang aklat sa paaralan
+
+Muli, ako si Juan. At eto ang aking bayang sinilangan
+ang \"Santa Ana\"
+ "
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 15.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

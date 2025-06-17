@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7avul0ybjbn8"]
+
+[ext_resource type="PackedScene" uid="uid://r04iaf3lfcpc" path="res://scenes/World/Sokoban/sokoban_world_1.tscn" id="1_jn6ay"]
+[ext_resource type="PackedScene" uid="uid://cqas3f3vaheuy" path="res://scenes/UI/in_game_ui.tscn" id="2_al8qm"]
+
+[node name="tryscene" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="sokoban-world-1" parent="Node2D" instance=ExtResource("1_jn6ay")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="InGameUI" parent="CanvasLayer" instance=ExtResource("2_al8qm")]

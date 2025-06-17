@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://idf3cepxu6du"]
+
+[ext_resource type="Texture2D" uid="uid://bycyrxvc5ho4w" path="res://asset/Tileset/Slates/Slates v.2 [32x32px orthogonal tileset by Ivan Voirol].png" id="1_3yyry"]
+[ext_resource type="Script" path="res://scripts/Signs/parish_sign.gd" id="1_dh1do"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_urywa"]
+radius = 7.07107
+
+[node name="parish-sign" type="CharacterBody2D" groups=["SIGNS"]]
+script = ExtResource("1_dh1do")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3yyry")
+region_enabled = true
+region_rect = Rect2(672, 640, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_urywa")

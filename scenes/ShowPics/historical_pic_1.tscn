@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://48vqv5r4pggx"]
+
+[ext_resource type="Texture2D" uid="uid://bucqf581s4yw6" path="res://asset/Media/Photos/actual_church.png" id="1_qyxps"]
+
+[node name="historical-pic-1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 361.375)
+scale = Vector2(1.17944, 0.685484)
+texture = ExtResource("1_qyxps")

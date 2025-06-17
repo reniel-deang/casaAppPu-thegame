@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://dph1mgrxsommr"]
+
+[ext_resource type="Texture2D" uid="uid://buaddwbvl3ru" path="res://asset/Character/Idle.png" id="1_0cspj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqqn4"]
+atlas = ExtResource("1_0cspj")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs8q5"]
+atlas = ExtResource("1_0cspj")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_siuqt"]
+atlas = ExtResource("1_0cspj")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ph1r"]
+atlas = ExtResource("1_0cspj")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wugu8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqqn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs8q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_siuqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ph1r")
+}],
+"loop": true,
+"name": &"player_icon",
+"speed": 5.0
+}]
+
+[node name="player_icon" type="AnimatedSprite2D"]
+position = Vector2(32, 33.3587)
+scale = Vector2(1.94945, 2.08492)
+sprite_frames = SubResource("SpriteFrames_wugu8")
+animation = &"player_icon"
+autoplay = "player_icon"
+frame = 1
+frame_progress = 0.910878
+offset = Vector2(16, 16)

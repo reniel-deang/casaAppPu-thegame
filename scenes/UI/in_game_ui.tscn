@@ -1,0 +1,464 @@
+[gd_scene load_steps=39 format=3 uid="uid://cqas3f3vaheuy"]
+
+[ext_resource type="Script" path="res://scripts/UI/in_game_ui.gd" id="1_5m6kk"]
+[ext_resource type="Texture2D" uid="uid://bymvtyvgtkrgx" path="res://asset/GUI/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Sprite sheet for Basic Pack.png" id="1_bkdxx"]
+[ext_resource type="Script" path="res://scripts/UI/popup_menu_manager.gd" id="1_ya73l"]
+[ext_resource type="Texture2D" uid="uid://dyca5imwfwmcr" path="res://asset/GUI/Sprout Lands - UI Pack - Basic pack/custom sprites/modifided version of the sprite sheet.png" id="2_aa1iu"]
+[ext_resource type="Script" path="res://scripts/UI/stat_display_script.gd" id="3_cvans"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="3_sw3uo"]
+[ext_resource type="Texture2D" uid="uid://c5c24co6revdw" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight10.png" id="4_a1455"]
+[ext_resource type="PackedScene" uid="uid://bg05syjqhblpl" path="res://scenes/UI/android_controls.tscn" id="6_mv3wl"]
+[ext_resource type="Texture2D" uid="uid://dyh03xaeb0in2" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight32.png" id="6_vln8q"]
+[ext_resource type="Texture2D" uid="uid://bbvn1mlvys5pv" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark30.png" id="7_gh1ww"]
+[ext_resource type="Texture2D" uid="uid://bxh547ky0gseg" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-light/lineLight33.png" id="8_6rvs2"]
+[ext_resource type="Texture2D" uid="uid://csyxsh0tlr2rn" path="res://asset/GUI/kenney_onscreen-controls/Sprites/line-dark/lineDark29.png" id="8_dr330"]
+[ext_resource type="Texture2D" uid="uid://2laql0jfecly" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight22.png" id="12_0d8do"]
+[ext_resource type="Texture2D" uid="uid://7eq5kww07j6q" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight24.png" id="12_bofbn"]
+[ext_resource type="FontFile" uid="uid://d4c2lgu2lrqhi" path="res://asset/fonts/PixelOperator8-Bold.ttf" id="14_dtccr"]
+[ext_resource type="Texture2D" uid="uid://couh7olo0ttbx" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight25.png" id="14_hx16c"]
+[ext_resource type="Texture2D" uid="uid://ccu3i180xve1q" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight23.png" id="14_rcxyf"]
+[ext_resource type="Texture2D" uid="uid://ca2qo0nnbfwxp" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight26.png" id="16_fojq8"]
+[ext_resource type="Texture2D" uid="uid://lex2xxn2svqf" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight24.png" id="16_h76vd"]
+[ext_resource type="Texture2D" uid="uid://cmu4cwl0tiuwj" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight39.png" id="18_c3wv3"]
+[ext_resource type="Texture2D" uid="uid://cbx8m5ix67811" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight27.png" id="18_jvipp"]
+[ext_resource type="Texture2D" uid="uid://d0em3kqgmge3g" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-light/flatLight39.png" id="19_bqbus"]
+[ext_resource type="Texture2D" uid="uid://tgyhgywqoovw" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight12.png" id="20_7lvjd"]
+[ext_resource type="Texture2D" uid="uid://r8t858e2q2oi" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight14.png" id="20_esjhl"]
+[ext_resource type="Texture2D" uid="uid://b08xkivqv5dqo" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight25.png" id="22_i87v0"]
+[ext_resource type="Texture2D" uid="uid://c2164kprbpxac" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight38.png" id="24_5fprk"]
+[ext_resource type="Texture2D" uid="uid://cxt03lk2dvp3o" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight36.png" id="24_kqvk7"]
+[ext_resource type="Texture2D" uid="uid://drqs0gb1s7xil" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight34.png" id="27_xswry"]
+[ext_resource type="Texture2D" uid="uid://c2effmmliqx45" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight36.png" id="28_gxkn1"]
+[ext_resource type="Texture2D" uid="uid://c2mk2ubijejig" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight37.png" id="29_u7e08"]
+[ext_resource type="Texture2D" uid="uid://co7x4pld1euxc" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight39.png" id="30_mtmgc"]
+[ext_resource type="Texture2D" uid="uid://culsug1wj22sl" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight47.png" id="30_q3o45"]
+[ext_resource type="Texture2D" uid="uid://d0v1r4bprnhdp" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-light/flatLight47.png" id="31_inv3j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2viig"]
+texture = ExtResource("1_bkdxx")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(626, 294, 12, 4)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_87i2o"]
+texture = ExtResource("2_aa1iu")
+region_rect = Rect2(741, 166, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vu0c"]
+texture = ExtResource("2_aa1iu")
+region_rect = Rect2(709, 164, 22, 24)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cqayx"]
+texture = ExtResource("2_aa1iu")
+region_rect = Rect2(677, 102, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tyvmb"]
+texture = ExtResource("2_aa1iu")
+region_rect = Rect2(645, 100, 22, 24)
+
+[node name="InGameUI" type="Control" groups=["platform"]]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5m6kk")
+
+[node name="popupMenu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("1_ya73l")
+menu_screen = NodePath("baseMenuScreenContainer")
+
+[node name="baseMenuScreenContainer" type="VBoxContainer" parent="popupMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+
+[node name="separator" type="Control" parent="popupMenu/baseMenuScreenContainer"]
+layout_mode = 2
+
+[node name="baseMenuScreen" type="MarginContainer" parent="popupMenu/baseMenuScreenContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="toggleMenuButton" type="Button" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(50, 4)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_2viig")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer"]
+custom_minimum_size = Vector2(430, 160)
+layout_mode = 2
+texture = ExtResource("4_a1455")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 15
+
+[node name="buttonContainer" type="VBoxContainer" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="topButtonContainer" type="HBoxContainer" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="helpButton" type="Button" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_87i2o")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_87i2o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5vu0c")
+
+[node name="pauseButton" type="Button" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/topButtonContainer"]
+visible = false
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_cqayx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cqayx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tyvmb")
+
+[node name="buttomButtonContainer2" type="HBoxContainer" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="save" type="TouchScreenButton" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/buttomButtonContainer2"]
+position = Vector2(-121, -29)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("8_dr330")
+texture_pressed = ExtResource("6_vln8q")
+
+[node name="quit" type="TouchScreenButton" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/buttomButtonContainer2"]
+position = Vector2(-57, -29)
+scale = Vector2(1.2, 1.2)
+texture_normal = ExtResource("7_gh1ww")
+texture_pressed = ExtResource("8_6rvs2")
+
+[node name="statDisplayContainer" type="VBoxContainer" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+script = ExtResource("3_cvans")
+
+[node name="labelDisplay" type="Label" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 32
+text = "GAME"
+
+[node name="questDisplay" type="Label" parent="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/statDisplayContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 32
+text = "PAUSED"
+
+[node name="baseMenuOpenButtonContainer" type="VBoxContainer" parent="popupMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 20
+
+[node name="separator" type="Control" parent="popupMenu/baseMenuOpenButtonContainer"]
+layout_mode = 2
+
+[node name="toggleMenuButton" type="Button" parent="popupMenu/baseMenuOpenButtonContainer"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_2viig")
+
+[node name="Android_controls" parent="." instance=ExtResource("6_mv3wl")]
+
+[node name="left" parent="Android_controls" index="0"]
+texture_normal = ExtResource("12_0d8do")
+texture_pressed = ExtResource("12_bofbn")
+
+[node name="right" parent="Android_controls" index="1"]
+texture_normal = ExtResource("14_rcxyf")
+texture_pressed = ExtResource("14_hx16c")
+
+[node name="top" parent="Android_controls" index="2"]
+texture_filter = 2
+texture_normal = ExtResource("16_h76vd")
+texture_pressed = ExtResource("16_fojq8")
+
+[node name="restart" parent="Android_controls" index="3"]
+texture_normal = ExtResource("18_c3wv3")
+texture_pressed = ExtResource("19_bqbus")
+
+[node name="pause" parent="Android_controls" index="4"]
+texture_normal = ExtResource("20_7lvjd")
+texture_pressed = ExtResource("20_esjhl")
+
+[node name="bottom" parent="Android_controls" index="5"]
+texture_normal = ExtResource("22_i87v0")
+texture_pressed = ExtResource("18_jvipp")
+
+[node name="interact" parent="Android_controls" index="6"]
+position = Vector2(992, 480)
+texture_normal = ExtResource("24_kqvk7")
+texture_pressed = ExtResource("24_5fprk")
+
+[node name="next" parent="Android_controls" index="7"]
+position = Vector2(1120, 416)
+texture_normal = ExtResource("27_xswry")
+texture_pressed = ExtResource("28_gxkn1")
+
+[node name="accept" parent="Android_controls" index="8"]
+position = Vector2(1120, 544)
+texture_normal = ExtResource("29_u7e08")
+texture_pressed = ExtResource("30_mtmgc")
+
+[node name="skip" type="TouchScreenButton" parent="Android_controls"]
+position = Vector2(128, 96)
+rotation = 3.14159
+scale = Vector2(0.9, 0.9)
+texture_normal = ExtResource("30_q3o45")
+texture_pressed = ExtResource("31_inv3j")
+
+[node name="Texts" type="Node" parent="Android_controls"]
+
+[node name="show_place" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 152.0
+offset_top = 16.0
+offset_right = 1164.0
+offset_bottom = 80.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 32
+text = "MISTERYOSONG GUBAT"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="interact_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 352.0
+offset_top = 512.0
+offset_right = 1364.0
+offset_bottom = 576.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "INTERACT/TALK"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="jump_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 544.0
+offset_top = 448.0
+offset_right = 1556.0
+offset_bottom = 512.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "JUMP"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="skip_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 504.0
+offset_top = 400.0
+offset_right = 1516.0
+offset_bottom = 464.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "PROCEED/SKIP DIALOUGE"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="skip_ins2" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 384.0
+offset_top = 448.0
+offset_right = 1396.0
+offset_bottom = 512.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "HOLD TO RELEASE TO SKIP DIALOUGE"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="select_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 512.0
+offset_top = 624.0
+offset_right = 1524.0
+offset_bottom = 688.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "SELECT CHOICES"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="move_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = -128.0
+offset_top = 448.0
+offset_right = 884.0
+offset_bottom = 512.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "MOVEMENT BUTTONS"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="menu_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 536.0
+offset_top = 80.0
+offset_right = 1548.0
+offset_bottom = 144.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "MENU"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="restart_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = 712.0
+offset_top = 120.0
+offset_right = 1724.0
+offset_bottom = 184.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "RESTART 
+LEVEL"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="skipvideo_ins" type="Label" parent="Android_controls/Texts"]
+visible = false
+z_index = 10
+offset_left = -320.0
+offset_top = 96.0
+offset_right = 692.0
+offset_bottom = 160.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = "SKIP VIDEO"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="Android_controls/Texts"]
+
+[node name="place_name" type="Label" parent="Android_controls/Texts"]
+z_index = 10
+offset_left = -252.0
+offset_top = 695.0
+offset_right = 760.0
+offset_bottom = 727.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_sw3uo")
+theme_override_font_sizes/font_size = 16
+text = " STAGE 5 : ANG BAYAN NG STA ANA PAMPANGA"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 288.0
+offset_top = 320.0
+offset_right = 964.0
+offset_bottom = 352.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("14_dtccr")
+theme_override_font_sizes/font_size = 32
+text = "GAME SUCESSFULLY SAVED"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="pressed" from="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
+[connection signal="pressed" from="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/buttomButtonContainer2/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="popupMenu/baseMenuScreenContainer/baseMenuScreen/VBoxContainer/NinePatchRect/MarginContainer/buttonContainer/buttomButtonContainer2/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="popupMenu/baseMenuOpenButtonContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
+[connection signal="pressed" from="Android_controls/pause" to="popupMenu" method="_on_pause_pressed"]
+[connection signal="pressed" from="Android_controls/skip" to="Android_controls" method="_on_skip_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="Android_controls"]

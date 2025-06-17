@@ -1,0 +1,193 @@
+[gd_scene load_steps=17 format=3 uid="uid://2ab8uv0as7nb"]
+
+[ext_resource type="Texture2D" uid="uid://pa5qvauxmgbm" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/sky (z -3).png" id="1_2aj5h"]
+[ext_resource type="Script" path="res://scripts/UI/main_menu.gd" id="1_dccjt"]
+[ext_resource type="Script" path="res://scripts/UI/menu_base_paralax.gd" id="1_ek4ub"]
+[ext_resource type="Texture2D" uid="uid://cshuvlrvcp24c" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/bg_2 (z -2).png" id="2_ubwn5"]
+[ext_resource type="Texture2D" uid="uid://6xlg5bo0hvql" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/bg_1 (z -1).png" id="3_rv10e"]
+[ext_resource type="Texture2D" uid="uid://c3wpqlmqhst2t" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/middleground (z 0).png" id="4_jioa7"]
+[ext_resource type="Texture2D" uid="uid://m8hjv8cyd0x0" path="res://asset/Tileset/parish.png" id="4_ud4k3"]
+[ext_resource type="Script" path="res://scripts/UI/menu_front_paralax.gd" id="6_xtagu"]
+[ext_resource type="Texture2D" uid="uid://cwwaraxgrckc6" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight42.png" id="7_f4860"]
+[ext_resource type="Texture2D" uid="uid://duxs2shux6dqy" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-dark/shadedDark42.png" id="8_ewwxb"]
+[ext_resource type="Texture2D" uid="uid://bxto8d3y2cj3t" path="res://asset/GUI/kenney_onscreen-controls/Sprites/shaded-light/shadedLight16.png" id="10_fovy3"]
+[ext_resource type="FontFile" uid="uid://d4c2lgu2lrqhi" path="res://asset/fonts/PixelOperator8-Bold.ttf" id="11_ipwv0"]
+[ext_resource type="Texture2D" uid="uid://dpo8v0h328dp1" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-dark/transparentDark14.png" id="11_sl74f"]
+[ext_resource type="Texture2D" uid="uid://b7ovkwt51qgwd" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-light/flatLight41.png" id="12_1f8f1"]
+[ext_resource type="AudioStream" uid="uid://bs5ytxmhlimjh" path="res://asset/music/fanfare.mp3" id="12_7nygl"]
+[ext_resource type="Texture2D" uid="uid://d1xea85bdhn4w" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-dark/flatDark42.png" id="13_72t7v"]
+
+[node name="main-menu" type="Node2D"]
+position = Vector2(0, 294)
+script = ExtResource("1_dccjt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="base_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_ek4ub")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(0, 294)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer"]
+position = Vector2(-467, -566)
+scale = Vector2(1.02068, 1.315)
+texture = ExtResource("1_2aj5h")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer6"]
+position = Vector2(6.10352e-05, -294)
+scale = Vector2(1.39535, 0.766667)
+texture = ExtResource("4_ud4k3")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(0, 294)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer2"]
+position = Vector2(-480, 314)
+texture = ExtResource("2_ubwn5")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(0, 294)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer3"]
+position = Vector2(-379, -417)
+scale = Vector2(1.3469, 1)
+texture = ExtResource("3_rv10e")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(0, 294)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer4"]
+position = Vector2(-503, -389)
+texture = ExtResource("4_jioa7")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(0, 294)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer5"]
+
+[node name="front_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+layer = 0
+visible = false
+scroll_ignore_camera_zoom = true
+script = ExtResource("6_xtagu")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer"]
+position = Vector2(179, 380)
+texture = ExtResource("4_jioa7")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer2"]
+position = Vector2(-583, 335)
+texture = ExtResource("4_jioa7")
+
+[node name="Buttons" type="Node2D" parent="CanvasLayer"]
+z_index = 1
+position = Vector2(0, 294)
+
+[node name="start" type="TouchScreenButton" parent="CanvasLayer/Buttons"]
+position = Vector2(416, 90)
+scale = Vector2(1.7, 1.7)
+texture_normal = ExtResource("7_f4860")
+texture_pressed = ExtResource("8_ewwxb")
+
+[node name="select" type="TouchScreenButton" parent="CanvasLayer/Buttons"]
+position = Vector2(640, 90)
+scale = Vector2(1.7, 1.7)
+texture_normal = ExtResource("10_fovy3")
+texture_pressed = ExtResource("11_sl74f")
+
+[node name="select_level" type="TouchScreenButton" parent="CanvasLayer/Buttons"]
+position = Vector2(512, 186)
+scale = Vector2(1.7, 1.7)
+texture_normal = ExtResource("12_1f8f1")
+texture_pressed = ExtResource("13_72t7v")
+
+[node name="text_continue" type="Label" parent="CanvasLayer"]
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 1624.0
+offset_bottom = 320.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("11_ipwv0")
+theme_override_font_sizes/font_size = 32
+text = "CASA APP-PU : THE GAME"
+
+[node name="title" type="Label" parent="CanvasLayer"]
+offset_left = 736.0
+offset_top = 416.0
+offset_right = 960.0
+offset_bottom = 480.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("11_ipwv0")
+theme_override_font_sizes/font_size = 16
+text = "CONTINUE"
+
+[node name="version" type="Label" parent="CanvasLayer"]
+offset_left = 1056.0
+offset_top = 704.0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("11_ipwv0")
+theme_override_font_sizes/font_size = 16
+text = "CASA-BETA V.1.0"
+
+[node name="no_save" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 416.0
+offset_top = 32.0
+offset_right = 1720.0
+offset_bottom = 96.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("11_ipwv0")
+theme_override_font_sizes/font_size = 24
+text = "NO SAVE DATA FOUND!"
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_7nygl")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/Buttons/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons/select" to="." method="_on_select_pressed"]
+[connection signal="pressed" from="CanvasLayer/Buttons/select_level" to="." method="_on_select_level_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0hw3ijtocvq0"]
+
+[ext_resource type="Script" path="res://scripts/Cutscenes/Transitions/continue.gd" id="1_1fovr"]
+[ext_resource type="Script" path="res://scripts/UI/base_paralax2.gd" id="1_nnfrr"]
+[ext_resource type="Texture2D" uid="uid://bqincbyvrk1a0" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/Gradient (z -6).png" id="2_mfn6a"]
+[ext_resource type="Texture2D" uid="uid://bsgg5lwuokmnt" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/mtn (z -4).png" id="3_501pf"]
+[ext_resource type="Texture2D" uid="uid://wt4k7gswsl8k" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/sky (z -3).png" id="4_1pl2c"]
+[ext_resource type="Texture2D" uid="uid://dgboygq2gyn8l" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/bg_2 (z -2).png" id="5_mldfb"]
+[ext_resource type="Texture2D" uid="uid://ftjdsb2ldgg8" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/bg_1 (z -1).png" id="6_3te64"]
+[ext_resource type="Script" path="res://scripts/UI/front_paralax2.gd" id="7_n38fq"]
+[ext_resource type="Texture2D" uid="uid://bm2kmxva0vht1" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/middleground (z 0).png" id="8_ffm5j"]
+[ext_resource type="Texture2D" uid="uid://1c78nr4twjv" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/middleplus (z 1).png" id="9_em3tu"]
+[ext_resource type="PackedScene" uid="uid://cqas3f3vaheuy" path="res://scenes/UI/in_game_ui.tscn" id="10_jrtya"]
+[ext_resource type="AudioStream" uid="uid://4rom33l1noho" path="res://asset/music/Grassy World (8-Bit_Orchestral Overture) - Main Title Theme.mp3" id="11_hiv4c"]
+
+[node name="continue" type="Node2D" groups=["Continue"]]
+script = ExtResource("1_1fovr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="base_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_nnfrr")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer"]
+position = Vector2(-4, -2.99997)
+scale = Vector2(0.604167, 0.729)
+texture = ExtResource("2_mfn6a")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer2"]
+position = Vector2(-654, 48)
+scale = Vector2(1.48892, 1.85114)
+texture = ExtResource("3_501pf")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer3"]
+position = Vector2(-2833, 2)
+scale = Vector2(1, 1.19236)
+texture = ExtResource("4_1pl2c")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer4"]
+position = Vector2(1960, 422.75)
+scale = Vector2(1.12643, 1.2168)
+texture = ExtResource("5_mldfb")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer5"]
+position = Vector2(1676, 452)
+texture = ExtResource("6_3te64")
+
+[node name="front_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+layer = 3
+scroll_ignore_camera_zoom = true
+script = ExtResource("7_n38fq")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer"]
+position = Vector2(-3077, -21.9999)
+scale = Vector2(0.764322, 0.698955)
+texture = ExtResource("8_ffm5j")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer2"]
+position = Vector2(-229, 146)
+texture = ExtResource("9_em3tu")
+
+[node name="android_controls" type="CanvasLayer" parent="."]
+layer = 127
+
+[node name="InGameUI" parent="android_controls" instance=ExtResource("10_jrtya")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_hiv4c")
+autoplay = true

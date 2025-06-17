@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://duauy7bm4ef2e"]
+
+[ext_resource type="Script" path="res://scripts/NPCS/TownNpc/TakingNPCS/town_npc_talk_1.gd" id="1_clkla"]
+[ext_resource type="Texture2D" uid="uid://bgl8u272rqlue" path="res://asset/NPCS/Females/F_05.png" id="2_j5guf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k81x2"]
+atlas = ExtResource("2_j5guf")
+region = Rect2(0, 0, 16, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md810"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k81x2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wgsy"]
+radius = 5.0
+
+[node name="town_npc_talk1" type="CharacterBody2D" groups=["NPC"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_clkla")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -9)
+sprite_frames = SubResource("SpriteFrames_md810")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_7wgsy")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 4.0
+target_desired_distance = 30.0
+
+[node name="Timer" type="Timer" parent="."]

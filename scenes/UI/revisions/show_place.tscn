@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bus6qmthdj8c2"]
+
+[ext_resource type="Texture2D" uid="uid://dlplabhgphc84" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight06.png" id="1_w4uap"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="2_ngl0i"]
+
+[node name="show_place" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(656, 32)
+scale = Vector2(5, 0.4)
+texture = ExtResource("1_w4uap")
+
+[node name="show_place" type="Label" parent="."]
+z_index = 10
+offset_left = 152.0
+offset_top = 16.0
+offset_right = 1164.0
+offset_bottom = 80.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_ngl0i")
+theme_override_font_sizes/font_size = 32
+text = "BARIO KALINAN PATUNGO NG BAYAN"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

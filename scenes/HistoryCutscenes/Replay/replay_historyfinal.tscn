@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddgc2fv48nkce"]
+
+[ext_resource type="Script" path="res://scripts/HistoryCutscenes/Replay/replay_history_1.gd" id="1_rfx6p"]
+[ext_resource type="VideoStream" path="res://asset/Media/Videos/History of Santa Ana Parish, Sta. Ana, Pampanga GLpwlLw-CAg.ogv" id="2_hb1an"]
+[ext_resource type="PackedScene" uid="uid://jn63ktjg8ab3" path="res://scenes/UI/replay_video.tscn" id="3_lcfo2"]
+
+[node name="replay-historyfinal" type="Node2D" groups=["Cutscene_History"]]
+script = ExtResource("1_rfx6p")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+stream = ExtResource("2_hb1an")
+autoplay = true
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="video-controller" type="CanvasLayer" parent="."]
+
+[node name="replay-video" parent="video-controller" instance=ExtResource("3_lcfo2")]
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

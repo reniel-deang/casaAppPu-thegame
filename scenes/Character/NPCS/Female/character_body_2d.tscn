@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b78gtvdf66juu"]
+
+[ext_resource type="Script" path="res://scripts/NPCS/character_body_2d.gd" id="1_tbajg"]
+[ext_resource type="Texture2D" uid="uid://2vb4flayf0tw" path="res://icon.svg" id="2_cn6ay"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34wdp"]
+radius = 57.8705
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_tbajg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(27, 8)
+texture = ExtResource("2_cn6ay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(33, 10)
+shape = SubResource("CircleShape2D_34wdp")
+
+[node name="Camera2D" type="Camera2D" parent="."]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://co5i171c22wfw"]
+
+[ext_resource type="Texture2D" uid="uid://c5c24co6revdw" path="res://asset/GUI/kenney_onscreen-controls/Sprites/transparent-light/transparentLight10.png" id="1_tguig"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="2_2hf3g"]
+
+[node name="quest-indicator" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(391.333, 36.5)
+scale = Vector2(16.3768, 1.19565)
+texture = ExtResource("1_tguig")
+region_enabled = true
+region_rect = Rect2(1, 1, 46, 46)
+
+[node name="place_name2" type="Label" parent="."]
+z_index = 10
+offset_left = -128.0
+offset_top = 32.0
+offset_right = 884.0
+offset_bottom = 64.0
+scale = Vector2(1, 1.00814)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("2_2hf3g")
+theme_override_font_sizes/font_size = 16
+text = "! Maglibot sa bayan ng Santa Ana at alamin ang misyon"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

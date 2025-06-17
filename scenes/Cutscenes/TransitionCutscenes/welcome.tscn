@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=3 uid="uid://nxjquuyiu2k0"]
+
+[ext_resource type="Script" path="res://scripts/Cutscenes/Transitions/welcome.gd" id="1_n6n53"]
+[ext_resource type="Script" path="res://scripts/UI/menu_base_paralax.gd" id="2_2o2mn"]
+[ext_resource type="Texture2D" uid="uid://pa5qvauxmgbm" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/sky (z -3).png" id="3_qtj8q"]
+[ext_resource type="Texture2D" uid="uid://cshuvlrvcp24c" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/bg_2 (z -2).png" id="4_pfqk2"]
+[ext_resource type="Texture2D" uid="uid://6xlg5bo0hvql" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/bg_1 (z -1).png" id="5_i6uvg"]
+[ext_resource type="Texture2D" uid="uid://c3wpqlmqhst2t" path="res://asset/Paralax/Glitch parallex BG sampler/GLICFILAMTI11QV Scribe's Weald-Narrow forest/middleground (z 0).png" id="6_fv23n"]
+[ext_resource type="Script" path="res://scripts/UI/menu_front_paralax.gd" id="7_o0skx"]
+[ext_resource type="PackedScene" uid="uid://cqas3f3vaheuy" path="res://scenes/UI/in_game_ui.tscn" id="8_n2xdh"]
+[ext_resource type="AudioStream" uid="uid://4rom33l1noho" path="res://asset/music/Grassy World (8-Bit_Orchestral Overture) - Main Title Theme.mp3" id="9_c0eog"]
+
+[node name="welcome" type="Node2D" groups=["Transition"]]
+position = Vector2(0, 294)
+script = ExtResource("1_n6n53")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="base_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("2_2o2mn")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer"]
+position = Vector2(-467, -566)
+scale = Vector2(1.02068, 1.315)
+texture = ExtResource("3_qtj8q")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer2"]
+position = Vector2(-348, 6)
+texture = ExtResource("4_pfqk2")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer3"]
+position = Vector2(-379, -417)
+scale = Vector2(1.3469, 1)
+texture = ExtResource("5_i6uvg")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer4"]
+position = Vector2(-503, -389)
+texture = ExtResource("6_fv23n")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer5"]
+
+[node name="front_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+layer = 0
+scroll_ignore_camera_zoom = true
+script = ExtResource("7_o0skx")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer"]
+position = Vector2(179, 380)
+texture = ExtResource("6_fv23n")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(0, 294)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(3000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer2"]
+position = Vector2(-583, 335)
+texture = ExtResource("6_fv23n")
+
+[node name="android_controls" type="CanvasLayer" parent="."]
+layer = 127
+
+[node name="InGameUI" parent="android_controls" instance=ExtResource("8_n2xdh")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_c0eog")
+autoplay = true

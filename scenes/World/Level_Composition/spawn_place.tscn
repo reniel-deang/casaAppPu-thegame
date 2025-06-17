@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://b30yh6njdu0a6"]
+
+[ext_resource type="PackedScene" uid="uid://c66wlwnxrmwl2" path="res://scenes/World/Levels/spawn.tscn" id="1_8buoo"]
+[ext_resource type="Script" path="res://scripts/Worlds/spawnplace_script.gd" id="1_bw2kw"]
+[ext_resource type="PackedScene" uid="uid://lnabm23k83tt" path="res://scenes/Main/main_character.tscn" id="2_fq7uu"]
+[ext_resource type="AudioStream" uid="uid://difp7muslc1di" path="res://asset/music/the_field_of_dreams.mp3" id="3_q67iu"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="6_bs16o"]
+[ext_resource type="PackedScene" uid="uid://bus6qmthdj8c2" path="res://scenes/UI/revisions/show_place.tscn" id="7_g5vto"]
+[ext_resource type="PackedScene" uid="uid://cqas3f3vaheuy" path="res://scenes/UI/in_game_ui.tscn" id="7_povf4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obd43"]
+size = Vector2(85, 46)
+
+[node name="Spawn_Place" type="Node2D" groups=["Quest", "first"]]
+position = Vector2(-172, 51)
+script = ExtResource("1_bw2kw")
+
+[node name="Spawn" parent="." instance=ExtResource("1_8buoo")]
+position = Vector2(171, -50)
+
+[node name="MainCharacter" parent="Spawn" instance=ExtResource("2_fq7uu")]
+position = Vector2(-376, 258)
+scale = Vector2(1.03945, 0.782214)
+
+[node name="Camera2D" type="Camera2D" parent="Spawn/MainCharacter"]
+zoom = Vector2(2.5, 2.5)
+limit_left = -546
+limit_top = -265
+limit_right = 526
+limit_bottom = 362
+position_smoothing_enabled = true
+
+[node name="to_river" type="Area2D" parent="Spawn"]
+position = Vector2(-171, 50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spawn/to_river"]
+position = Vector2(155.5, -315)
+shape = SubResource("RectangleShape2D_obd43")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_q67iu")
+autoplay = true
+
+[node name="android_controls" type="CanvasLayer" parent="."]
+layer = 127
+
+[node name="InGameUI" parent="android_controls" instance=ExtResource("7_povf4")]
+
+[node name="Texts" type="Node" parent="android_controls"]
+
+[node name="Timer" type="Timer" parent="android_controls/Texts"]
+
+[node name="place_name" type="Label" parent="android_controls/Texts"]
+z_index = 10
+offset_left = -252.0
+offset_top = 695.0
+offset_right = 760.0
+offset_bottom = 727.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("6_bs16o")
+theme_override_font_sizes/font_size = 16
+text = " STAGE 5 : ANG BAYAN NG STA ANA PAMPANGA"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="show_place" parent="android_controls/Texts" instance=ExtResource("7_g5vto")]
+position = Vector2(0, 264)
+
+[node name="show_place" parent="android_controls/Texts/show_place" index="1"]
+text = "KAGUBATAN"
+
+[connection signal="body_entered" from="Spawn/to_river" to="." method="_on_to_river_body_entered"]
+[connection signal="timeout" from="android_controls/Texts/Timer" to="." method="_on_timer_timeout"]
+
+[editable path="android_controls/Texts/show_place"]

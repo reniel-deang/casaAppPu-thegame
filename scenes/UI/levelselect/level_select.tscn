@@ -1,0 +1,273 @@
+[gd_scene load_steps=19 format=3 uid="uid://dpgsoh63e7ewk"]
+
+[ext_resource type="Script" path="res://scripts/UI/levelselect/levelselect.gd" id="1_6sko2"]
+[ext_resource type="Script" path="res://scripts/UI/base_paralax2.gd" id="1_lrkv6"]
+[ext_resource type="PackedScene" uid="uid://d2vxem866ukmc" path="res://scenes/UI/levelselect/world_icon.tscn" id="1_odmao"]
+[ext_resource type="Texture2D" uid="uid://co22th1x6byu5" path="res://asset/Tileset/map.png" id="2_egepp"]
+[ext_resource type="PackedScene" uid="uid://dph1mgrxsommr" path="res://scenes/UI/levelselect/player_icon.tscn" id="3_7x5vt"]
+[ext_resource type="Texture2D" uid="uid://bsgg5lwuokmnt" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/mtn (z -4).png" id="3_tm88t"]
+[ext_resource type="Texture2D" uid="uid://wt4k7gswsl8k" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/sky (z -3).png" id="4_hvn5o"]
+[ext_resource type="Texture2D" uid="uid://dgboygq2gyn8l" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/bg_2 (z -2).png" id="5_6gc1y"]
+[ext_resource type="Texture2D" uid="uid://ftjdsb2ldgg8" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/bg_1 (z -1).png" id="6_6axy0"]
+[ext_resource type="Script" path="res://scripts/UI/front_paralax2.gd" id="7_no5bs"]
+[ext_resource type="Texture2D" uid="uid://bm2kmxva0vht1" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/middleground (z 0).png" id="8_84s6l"]
+[ext_resource type="Texture2D" uid="uid://1c78nr4twjv" path="res://asset/Paralax/Glitch parallex BG sampler/GA9NRNJSB792OG4 Akaki Cape-shows depth/middleplus (z 1).png" id="9_sn8oj"]
+[ext_resource type="FontFile" uid="uid://cp8xob43orb1" path="res://asset/fonts/PixelOperator8.ttf" id="11_i50ym"]
+[ext_resource type="FontFile" uid="uid://d4c2lgu2lrqhi" path="res://asset/fonts/PixelOperator8-Bold.ttf" id="12_tuuru"]
+[ext_resource type="Texture2D" uid="uid://d0v1r4bprnhdp" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-light/flatLight47.png" id="14_8yy6g"]
+[ext_resource type="Texture2D" uid="uid://btfmegwpc3d07" path="res://asset/GUI/kenney_onscreen-controls/Sprites/flat-dark/flatDark48.png" id="15_qjj6m"]
+[ext_resource type="PackedScene" uid="uid://cqas3f3vaheuy" path="res://scenes/UI/in_game_ui.tscn" id="17_tmsv2"]
+[ext_resource type="AudioStream" uid="uid://c6f5g21tmnc1k" path="res://asset/music/Path to Lake Land.ogg" id="18_avyce"]
+
+[node name="level_select" type="Node2D" groups=["Level_Select"]]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="base_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_lrkv6")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer"]
+position = Vector2(34, 101)
+scale = Vector2(0.956652, 0.773109)
+texture = ExtResource("2_egepp")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(-34, -101)
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer2"]
+position = Vector2(-654, 48)
+scale = Vector2(1.48892, 1.85114)
+texture = ExtResource("3_tm88t")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(-34, -101)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer3"]
+position = Vector2(-2833, 2)
+scale = Vector2(1, 1.19236)
+texture = ExtResource("4_hvn5o")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(-34, -101)
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer4"]
+position = Vector2(1960, 422.75)
+scale = Vector2(1.12643, 1.2168)
+texture = ExtResource("5_6gc1y")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/base_paralax"]
+visible = false
+position = Vector2(-34, -101)
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/base_paralax/ParallaxLayer5"]
+position = Vector2(1676, 452)
+texture = ExtResource("6_6axy0")
+
+[node name="front_paralax" type="ParallaxBackground" parent="CanvasLayer"]
+layer = 0
+visible = false
+scroll_ignore_camera_zoom = true
+script = ExtResource("7_no5bs")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer"]
+position = Vector2(-3077, -21.9999)
+scale = Vector2(0.764322, 0.698955)
+texture = ExtResource("8_84s6l")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/front_paralax"]
+position = Vector2(-34, -101)
+motion_scale = Vector2(3, 3)
+motion_mirroring = Vector2(5000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/front_paralax/ParallaxLayer2"]
+position = Vector2(-229, 146)
+texture = ExtResource("9_sn8oj")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1248.0
+offset_bottom = 704.0
+color = Color(0.517647, 0.517647, 0.517647, 0.501961)
+
+[node name="Texts" type="Node" parent="CanvasLayer"]
+
+[node name="Title" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 968.0
+offset_bottom = 128.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 64
+text = "LEVEL SELECT"
+
+[node name="decs1" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 776.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 16
+text = "Ang \"RIO DE STA ANA\""
+
+[node name="decs2" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 224.0
+offset_top = 416.0
+offset_right = 872.0
+offset_bottom = 480.0
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 16
+text = "Ang \"Encuentros de
+Santa Ana\""
+
+[node name="decs3" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 512.0
+offset_top = 224.0
+offset_right = 1160.0
+offset_bottom = 288.0
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 16
+text = "Ang nawawalang puno
+at halaman ng Santa
+Ana"
+
+[node name="decs4" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 576.0
+offset_top = 512.0
+offset_right = 1224.0
+offset_bottom = 576.0
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 16
+text = "Ang Bayan ng Santa Ana 
+Pampanga"
+
+[node name="decs5" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 864.0
+offset_top = 288.0
+offset_right = 1512.0
+offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 16
+text = "Santa Ana! ang ika 21 na 
+munisipalidad ng Pampanga"
+
+[node name="decs6" type="Label" parent="CanvasLayer/Texts"]
+offset_left = 928.0
+offset_top = 448.0
+offset_right = 1576.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("11_i50ym")
+theme_override_font_sizes/font_size = 16
+text = "Ang Lumang katawagan ng 
+14 barrio ng Santa Ana "
+
+[node name="unlock_level" type="Label" parent="CanvasLayer/Texts"]
+visible = false
+offset_left = 64.0
+offset_top = 640.0
+offset_right = 1220.0
+offset_bottom = 672.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("12_tuuru")
+theme_override_font_sizes/font_size = 32
+text = "YOU MUST FINISH THIS CURRENT LEVEL FIRST"
+
+[node name="levelselect" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6sko2")
+
+[node name="World_icon" parent="CanvasLayer/levelselect" instance=ExtResource("1_odmao")]
+offset_left = 64.0
+offset_top = 224.0
+offset_right = 128.0
+offset_bottom = 288.0
+
+[node name="World_icon2" parent="CanvasLayer/levelselect" instance=ExtResource("1_odmao")]
+offset_left = 160.0
+offset_top = 384.0
+offset_right = 224.0
+offset_bottom = 448.0
+world_index = 2
+
+[node name="World_icon3" parent="CanvasLayer/levelselect" instance=ExtResource("1_odmao")]
+offset_left = 448.0
+offset_top = 192.0
+offset_right = 512.0
+offset_bottom = 256.0
+world_index = 3
+
+[node name="World_icon4" parent="CanvasLayer/levelselect" instance=ExtResource("1_odmao")]
+offset_left = 512.0
+offset_top = 480.0
+offset_right = 576.0
+offset_bottom = 544.0
+world_index = 4
+
+[node name="World_icon5" parent="CanvasLayer/levelselect" instance=ExtResource("1_odmao")]
+offset_left = 800.0
+offset_top = 256.0
+offset_right = 864.0
+offset_bottom = 320.0
+world_index = 5
+
+[node name="World_icon6" parent="CanvasLayer/levelselect" instance=ExtResource("1_odmao")]
+offset_left = 864.0
+offset_top = 416.0
+offset_right = 928.0
+offset_bottom = 480.0
+world_index = 6
+
+[node name="player_icon" parent="CanvasLayer/levelselect" instance=ExtResource("3_7x5vt")]
+position = Vector2(64, 224)
+scale = Vector2(2, 2)
+
+[node name="back" type="TouchScreenButton" parent="CanvasLayer/levelselect"]
+position = Vector2(64, 64)
+texture_normal = ExtResource("14_8yy6g")
+texture_pressed = ExtResource("15_qjj6m")
+
+[node name="android_controls" type="CanvasLayer" parent="."]
+layer = 127
+
+[node name="InGameUI" parent="android_controls" instance=ExtResource("17_tmsv2")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_avyce")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/levelselect/back" to="CanvasLayer/levelselect" method="_on_back_pressed"]
+[connection signal="timeout" from="Timer" to="CanvasLayer/levelselect" method="_on_timer_timeout"]
