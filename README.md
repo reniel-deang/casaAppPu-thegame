@@ -1,78 +1,126 @@
-<p align="center">
-  <img width="1280" alt="cover" src="https://user-images.githubusercontent.com/2206700/189457799-6327bab0-b085-4421-8640-6a18e395d17d.png">
-</p>
+# 🎮🏛️ Casa App-PU: A Retro Game on the History of Santa Ana Pampanga
 
-<h1 align="center">Dialogic 2</h1>
+**Casa App-PU** is a Filipino-language Android mobile game built using the **Godot Game Engine** with **GDScript**, designed to **preserve and promote the rich history and culture of San Isidro, Santa Ana, Pampanga**. Through engaging gameplay, beautiful pixel art, and interactive storytelling, players embark on a nostalgic and educational adventure through time.
 
-<p align="center">
-  Create <b>Dialogs</b>, <b>Visual Novels</b>, <b>RPGs</b>, and <b>manage Characters</b> with Godot to create your Game!
-</p>
+> 🧠 Learn history. 🎯 Solve puzzles. 🎮 Play with purpose.
 
-<p align="center">
-  <a href="https://discord.gg/DjcDgDaTMe" target="_blank" style="text-decoration:none"><img alt="Discord" src="https://img.shields.io/discord/628713677239091231?logo=discord&labelColor=CFC9C8&color=646FA9"></a>
-  <a href="https://godotengine.org/download/" target="_blank" style="text-decoration:none"><img alt="Godot v4.2+" src="https://img.shields.io/badge/Godot-v4.2+-%23478cbf?labelColor=CFC9C8&color=49A9B4" /></a>
-  <a href="https://docs.dialogic.pro/introduction.html" target="_blank" style="text-decoration:none"><img alt="Dialogic 2 Documentation" src="https://img.shields.io/badge/documention-online-green?labelColor=CFC9C8&color=6BCD69"></a>
-  <a href="https://github.com/dialogic-godot/dialogic/actions/workflows/unit_test.yml" target="_blank style="text-decoration:none"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/dialogic-godot/dialogic/unit_test.yml?labelColor=CFC9C8&color=DBDCB8"></a>
-  <a href="https://github.com/dialogic-godot/dialogic/releases"  target="_blank" style="text-decoration:none"><img alt="Latest Dialogic Release" src="https://img.shields.io/github/v/release/dialogic-godot/dialogic?include_prereleases&labelColor=CFC9C8&color=CBA18C"></a>
-</p>
+---
 
-## Table of Contents
-- [Version](#version)
-- [Installation](#installation)
-- [Documentation](#documentation)
-- [Testing](#testing)
-- [Credits](#credits)
-- [License](#license)
+<img width="100%" alt="banner" src="https://github.com/user-attachments/assets/494c4fd0-f578-4937-89c6-44ecddd4dfbf" />
 
-## Version
+---
 
-Dialogic 2 **requires at least Godot 4.2**.
+## 🗺️ Game Overview
 
-[If you are looking for the Godot 3.x version (Dialogic 1.x) you can find it here.](https://github.com/dialogic-godot/dialogic-1)
+You play as **Juan**, a young man who accidentally travels back in time and begins an epic journey through the past. Along the way, Juan encounters iconic historical figures, solves local puzzles, completes cultural quests, and gradually uncovers the rich traditions of Sta. Ana.
 
-## Installation
-Follow the installation instructions on our [Getting Started](https://docs.dialogic.pro/getting-started.html#1-installation--activation) documentation.
+Each level unlocks **cutscenes, video clips**, or **narrated historical content**, immersing players in local heritage while having fun.
 
-Dialogic comes with an auto-updater so you can install future versions right from within the plugin.
+---
 
-## Documentation
-You can find the official documentation of Dialogic here: [Dialogic Documentation](https://docs.dialogic.pro/)
+## 🎮 Gameplay Highlights
 
-There is a Class Reference as well: [Class Reference](https://docs.dialogic.pro/class_index.html)
+### 🔄 Genre Mix:
+- 🧩 **Sokoban Puzzle** – Push blocks to reach objectives  
+- 🏃 **Platformer** – Jump, dodge, and explore classic levels  
+- 🗨️ **Adventure/Quest** – Interact with NPCs and complete story-based missions
+
+### 📖 Educational Integration:
+- 🔓 Each level unlocks a **narrated video** or **historical vignette**
+- 🏛️ Emphasizes **cultural preservation** of Sta. Ana, Pampanga
+
+### 💾 Core Features:
+- 🎬 Cutscenes and dialogue-driven storytelling  
+- 💾 Save/Load progress system  
+- 📜 Level selection support  
+- 🎨 Retro pixel-art visuals  
+- 🗣️ Entirely in Filipino for full cultural immersion
+
+---
+
+## 🖼️ Screenshots
+
+<div align="center">
+
+<table>
+  <tr>
+    <td><img width="270" src="https://github.com/user-attachments/assets/7467fc65-fef4-4caa-8a06-26bef4954b1d" /></td>
+    <td><img width="270" src="https://github.com/user-attachments/assets/b6034c99-e534-4d58-80ac-4a7b50650066" /></td>
+    <td><img width="270" src="https://github.com/user-attachments/assets/c90d1be6-fb9d-4a6a-a1d0-e07366d064da" /></td>
+  </tr>
+  <tr>
+    <td><img width="270" src="https://github.com/user-attachments/assets/bc1881c5-d457-4deb-b1be-8c0f583afa24" /></td>
+    <td><img width="270" src="https://github.com/user-attachments/assets/f81492e6-f4b1-4c3d-9559-76b22aa53665" /></td>
+    <td><img width="270" src="https://github.com/user-attachments/assets/0c8b4b65-35c2-49aa-a5b7-a9d205234338" /></td>
+  </tr>
+  <tr>
+    <td><img width="270" src="https://github.com/user-attachments/assets/33fde694-e81e-43bc-8e8c-bffdc79a06d1" /></td>
+    <td><img width="270" src="https://github.com/user-attachments/assets/b821219e-0a37-402c-b0a5-79e8183af7d3" /></td>
+    <td><img width="270" src="https://github.com/user-attachments/assets/c690e142-7721-4815-9ed7-d68a18972edb" /></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <img width="540" src="https://github.com/user-attachments/assets/efc78274-a184-4d80-be9c-951d3c92b28a" />
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 🛠️ Built With
+
+- **Godot Engine** – Open-source and lightweight game engine  
+- **GDScript** – Godot’s built-in scripting language  
+- **Aseprite / Pixel Art Tools** – For crafting retro art assets  
+- **Original Historical Content** – Sourced from Sta. Ana, Pampanga archives
+
+---
+
+## 📱 Target Platform
+
+- ✅ Android (APK ready)  
+- 🔜 Windows/Web version (optional/future support)
+
+---
+
+## 🔊 Audio-Visual Experience
+
+- 🎧 Filipino voice narration and traditional sounds  
+- 🖼️ Authentic historical visuals in pixel-art form
+
+---
+
+## 🚀 Installation
+
+To run locally:
+<pre>
+# Clone the repository
+git clone https://github.com/reniel-deang/casaAppPu-thegame
+</pre>
 
 
-## Connect with us!
-If you need help or want to share your Dialogic projects, take a look at the following options:
+- Open the project with Godot (v3 or v4) godot 
 
-- Ask questions, or report bugs on our [Discord](https://discord.gg/DjcDgDaTMe)
-- Report bugs and issues on the [GitHub Issues Page](https://github.com/dialogic-godot/dialogic/issues)
-- Ask questions on [GitHub Discussions](https://github.com/dialogic-godot/dialogic/discussions)
+---
 
-## Testing
-Dialogic uses [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) to ensure specific parts function as expected. These tests run on every git push and pull request. The framework to do these tests is called [gdUnit4](https://github.com/MikeSchulze/gdUnit4) and our tests reside in the [/Tests/Unit](https://github.com/dialogic-godot/dialogic/tree/main/Tests/Unit) path. We recommend installing the `gdUnit4` add-on from the `AssetLib`, with this add-on, you can run tests locally.
+To export an APK, follow the official Godot Android export guide.
 
-To get started, take a look at the existing files in the path and read the documentation to [create your first test](https://mikeschulze.github.io/gdUnit4/first_steps/firstTest/).
+## 🎖️ Acknowledgements
+- The people of Santa Ana, Pampanga
 
-## Interacting with the Source Code
-All methods and variables in the Dialogic 2 source **code prefixed with an underscore (`_`)** are considered *private*, for instance: `_remove_character()`.
+- Local cultural historians and contributors
 
-While you can use them, they may change in their behavior or change their signature, causing breakage in your code while moving between versions.
-Most private methods are used inside public ones; if you need help, check the documentation.
+- Open source game development community (Godot, Aseprite, etc.)
 
-**Public methods and variables can be found in our [Class Reference](https://docs.dialogic.pro/class_index.html).**
+---
 
-During the Alpha and Beta version stages, code may change at any Dialogic Release to allow drafting a better design.
-Changelogs will accommodate for these changes and inform you on how to update your code.
+## 📜 License & Cultural Note
+- Core Advocate of Santa Ana: Alliance in Preserving Unremembered Heritage or CASA-APU is a non-stock and non-profit private organization whose main goal is to usher in a cultural rebirth in the town of Santa Ana Pampanga.
 
+- This project is a Computer Science thesis developed as part of an academic requirement. It is not intended for commercial use and exists solely for educational, archival, and cultural preservation purposes. We kindly ask users to respect the cultural sensitivity and historical context of the content when sharing, remixing, or referencing any part of this work.
+  
+<pre>“Ang hindi marunong lumingon sa pinanggalingan ay hindi makararating sa paroroonan.”
+– Filipino Proverb</pre>
 
-## Credits
-Made by [Jowan-Spooner](https://github.com/Jowan-Spooner) and [Emilio Coppola](https://github.com/coppolaemilio).
-
-Contributors: [CakeVR](https://github.com/CakeVR), [Exelia](https://github.com/exelia-antonov), [zaknafean](https://github.com/zaknafean), [and more!](https://github.com/dialogic-godot/dialogic/graphs/contributors).
-
-Special thanks: [Arnaud](https://github.com/arnaudvergnet), [AnidemDex](https://github.com/AnidemDex), [ellogwen](https://github.com/ellogwen), [Tim Krief](https://github.com/timkrief), [Toen](https://twitter.com/ToenAndreMC), Òscar, [Francisco Presencia](https://francisco.io/), [M7mdKady14](https://github.com/M7mdKady14).
-
-### Thank you to all my [Patreons](https://www.patreon.com/coppolaemilio) and Github sponsors for making this possible!
-
-## License
-This project is licensed under the terms of the [MIT license](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE).
