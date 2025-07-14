@@ -1,6 +1,6 @@
 # 🎮🏛️ Casa App-PU: A Retro Game on the History of Santa Ana Pampanga
 
-**Casa App-PU** is a Filipino-language Android mobile game built using the **Godot Game Engine** with **GDScript**, designed to **preserve and promote the rich history and culture of San Isidro, Santa Ana, Pampanga**. Through engaging gameplay, beautiful pixel art, and interactive storytelling, players embark on a nostalgic and educational adventure through time.
+**Casa App-PU** is a Filipino-language Android mobile game built using the **Godot Game Engine** with **GDScript**, designed to **preserve and promote the rich history and culture of Santa Ana, Pampanga**. Through engaging gameplay, beautiful pixel art, and interactive storytelling, players embark on a nostalgic and educational adventure through time.
 
 > 🧠 Learn history. 🎯 Solve puzzles. 🎮 Play with purpose.
 
